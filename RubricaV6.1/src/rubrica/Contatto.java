@@ -1,5 +1,7 @@
 package rubrica;
 
+import exception.FormatoException;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
@@ -16,18 +18,19 @@ public class Contatto {
     private final String NOME;
     private String eMail;
     private ArrayList<String> numeriTel;
+    //String regex1 = "[a-z[A-Z]]";
 
-    public Contatto(String nome, String email, String tels) {
+    public Contatto(String nome, String email, String tels) throws FormatoException {
         NOME = nome;
         this.eMail = email;
         numeriTel = new ArrayList<>(Arrays.asList(tels.split(",")));
     }
 
-    public Contatto(String nome, String email) {
+    public Contatto(String nome, String email) throws FormatoException {
         this(nome, email, "");
     }
 
-    public Contatto(String nome) {
+    public Contatto(String nome) throws FormatoException {
         this(nome, "", "");
     }
 
@@ -102,4 +105,10 @@ public class Contatto {
 	public String getNome() {
 		return NOME;
 	}
+
+	/**
+	public boolean isStringValid(String s) {
+        return s.matches(regex1);
+    }
+     */
 }

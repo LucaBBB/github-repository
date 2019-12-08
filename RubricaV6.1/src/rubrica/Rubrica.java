@@ -1,6 +1,8 @@
 package rubrica;
 
 import exception.DimException;
+import exception.FormatoException;
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -56,7 +58,7 @@ public class Rubrica {
      * @return vedere return del metodo aggiugi(Contatto c).
      * @throws DimException l'eccezione per aver cercato di inserire oltre il limite.
      */
-    public int aggiungiN(String nome) throws DimException {
+    public int aggiungiN(String nome) throws DimException, FormatoException {
         return aggiungi(new Contatto(nome));
     }
 
@@ -67,7 +69,7 @@ public class Rubrica {
      * @return vedere return del metodo aggiugi(Contatto c).
      * @throws DimException l'eccezione per aver cercato di inserire oltre il limite.
      */
-    public int aggiungiNE(String nome, String email) throws DimException {
+    public int aggiungiNE(String nome, String email) throws DimException, FormatoException {
         return aggiungi(new Contatto(nome, email));
     }
 
@@ -79,7 +81,7 @@ public class Rubrica {
      * @return vedere return del metodo aggiugi(Contatto c).
      * @throws DimException l'eccezione per aver cercato di inserire oltre il limite.
      */
-    public int aggiungiNET(String nome, String email, String tel) throws DimException {
+    public int aggiungiNET(String nome, String email, String tel) throws DimException, FormatoException {
         return aggiungi(new Contatto(nome, email, tel));
     }
 
@@ -174,6 +176,8 @@ public class Rubrica {
             System.out.println("Non esiste il file " + fileName);
         } catch (IOException e) {
             System.out.println("Eccezione IOException!");
+        } catch (FormatoException e) {
+            e.printStackTrace();
         }
         return 0;
     }
