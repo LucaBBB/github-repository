@@ -1,0 +1,4 @@
+Versione di Rubrica che implementa l'uso delle eccezioni.
+
+- Un'eccezione e' puo' verificarsi nel momento in cui si va a tentare di aggiungere un elemento in più della dimensione
+consentita.
