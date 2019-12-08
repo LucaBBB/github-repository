@@ -5,6 +5,13 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
+/**
+ * @author Luca
+ * date: 2019-12-08
+ *
+ * Progetto esame di Programmazione ad Oggetti dell'Anno Accademico 2018/2019.
+ */
+
 public class Appuntamento {
     LocalDate data;
     LocalTime ora;
