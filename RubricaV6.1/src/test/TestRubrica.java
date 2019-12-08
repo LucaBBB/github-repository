@@ -1,6 +1,7 @@
 package test;
 
 import exception.DimException;
+import exception.FormatoException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -8,7 +9,6 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import rubrica.Contatto;
 import rubrica.Rubrica;
-import java.io.IOException;
 import java.util.Random;
 
 import static org.junit.Assert.*;
@@ -42,7 +42,7 @@ public class TestRubrica {
      * Infine verifica del numero di elementi presenti.
      */
     @Test
-    public void testAggiungi() throws DimException {
+    public void testAggiungi() throws DimException, FormatoException {
         Contatto c = new Contatto("Giovanni", "giovanni@email.com", "272727,1010202");
         assertEquals(1, rubrica.aggiungi(c));
         assertEquals(1, rubrica.aggiungiNET("Marco", "marcolino98@email.com", "7454774"));
@@ -52,8 +52,13 @@ public class TestRubrica {
         assertEquals(3, rubrica.numEl());
     }
 
+    /**
+     * Test per verificare la chiamata all'eccezione per evitare l'inserimento oltre il limite di MAX_DIM.
+     * @throws DimException eccezione per MAX_DIM.
+     * @throws FormatoException eccezione per il formato delle stringhe.
+     */
     @Test
-    public void testAggiungiException() throws DimException {
+    public void testAggiungiException() throws DimException, FormatoException {
         exception.expect(DimException.class);
         exception.expectMessage("Dimensione non valida!");
         Contatto c = new Contatto("Giovanni", "giovanni@email.com", "272727,1010202");
@@ -65,10 +70,10 @@ public class TestRubrica {
     }
 
     /**
-     * Test della ricerca per nome e della ricerca per email
+     * Test della ricerca per nome e della ricerca per email.
      */
     @Test
-    public void testRicerca() throws DimException {
+    public void testRicerca() throws DimException, FormatoException {
         testAggiungi(); // Aggiunge 3 elementi alla rubrica di MAX_DIM==3
         assertEquals(1, rubrica.cercaPerNome("M").size());
         assertEquals(1, rubrica.cercaPerEmail("g").size());
@@ -78,7 +83,7 @@ public class TestRubrica {
      * Test della ricerca per l'eliminazione per nome e per l'eliminazione per email
      */
     @Test
-    public void testElimina() throws DimException {
+    public void testElimina() throws DimException, FormatoException {
         testAggiungi(); // Aggiunge 3 elementi alla rubrica di MAX_DIM==3
         assertTrue(rubrica.eliminaPerNome("G"));
         assertFalse(rubrica.eliminaPerNome("F"));
@@ -90,7 +95,7 @@ public class TestRubrica {
      * Test per la dimensione della rubrica
      */
     @Test
-    public void testSize() throws DimException {
+    public void testSize() throws DimException, FormatoException {
         testAggiungi(); // Aggiunge 3 elementi alla rubrica di MAX_DIM==3
         assertEquals(3, rubrica.numEl());
     }
@@ -101,10 +106,9 @@ public class TestRubrica {
      * ArrayList di oggetti Contatti.
      * In seguito, si verifica che il numero di oggetti di tipo Contatto sia uguale al numero di oggetti che erano pre-
      * -senti nell'ArrayList.
-     * @throws IOException gestione dell'eccezione per l'IOException.
      */
     @Test
-    public void testFileIO() throws IOException {
+    public void testFileIO() {
         int letti = rubrica.leggiContatti("fileContatti");
         assertEquals(letti-1, rubrica.numEl());
         int scritti = rubrica.scriviContatti("nuovoFile");
