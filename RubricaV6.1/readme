@@ -1,0 +1,7 @@
+/**
+ * @author Luca Borsalino
+ * Date: 2019/12/07
+ *
+ * Versione con aggiunta della lettura e della scrittura da/su file.
+ * Aggiunti anche i test (funzionanti) per i due metodi aggiunti.
+ */
