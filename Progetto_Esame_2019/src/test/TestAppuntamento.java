@@ -6,6 +6,10 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class TestAppuntamento {
+    /**
+     * Metodo utile per testare la creazione di un oggetto Appuntamento e per verificare il corretto funzionamento
+     * dei metodi get della classe Appuntamento.
+     */
     @Test
     public void testCreazioneAppuntamento() {
         String data = "01-01-2019";
@@ -22,4 +26,5 @@ public class TestAppuntamento {
         assertEquals(nome, a.getNome());
         assertEquals(luogo, a.getLuogo());
     }
+
 }
