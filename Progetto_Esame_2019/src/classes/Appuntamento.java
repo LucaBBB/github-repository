@@ -10,6 +10,7 @@ import java.util.Locale;
  * date: 2019-12-08
  *
  * Progetto esame di Programmazione ad Oggetti dell'Anno Accademico 2018/2019.
+ * Classe Appuntamento che modella un appuntamento.
  */
 
 public class Appuntamento {
@@ -52,6 +53,8 @@ public class Appuntamento {
     public LocalTime getOraObj() {
         return ora;
     }
+
+    public String getOraString() {return ora.toString();}
 
     public int getDurata() {
         return durata;
