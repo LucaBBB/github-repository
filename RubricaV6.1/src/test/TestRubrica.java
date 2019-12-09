@@ -9,14 +9,16 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import rubrica.Contatto;
 import rubrica.Rubrica;
+
+import javax.management.InstanceAlreadyExistsException;
 import java.util.Random;
 
 import static org.junit.Assert.*;
 
 /**
  * @author Luca Borsalino
- * Date: 2019/12/07
- *
+ * Date: 2019/12/09
+ * <p>
  * Versione con aggiunta della lettura e della scrittura da/su file.
  * Aggiunti anche i test (funzionanti) per i due metodi aggiunti.
  */
@@ -32,7 +34,7 @@ public class TestRubrica {
         String nome = "Rubrica " + rand.nextInt();
         int maxDim = 3;
         rubrica = new Rubrica(maxDim, nome);
-        assertEquals(numRubricheOld+1, Rubrica.getNumRubriche());
+        assertEquals(numRubricheOld + 1, Rubrica.getNumRubriche());
         assertEquals(maxDim, rubrica.MAX_DIM);
     }
 
@@ -48,13 +50,13 @@ public class TestRubrica {
         assertEquals(1, rubrica.aggiungiNET("Marco", "marcolino98@email.com", "7454774"));
         assertEquals(0, rubrica.aggiungiNE("Marco", "ciaomamma@email.com"));
         assertEquals(1, rubrica.aggiungiN("Giovannino"));
-        //assertEquals(-1, rubrica.aggiungiN("Calogero"));
         assertEquals(3, rubrica.numEl());
     }
 
     /**
      * Test per verificare la chiamata all'eccezione per evitare l'inserimento oltre il limite di MAX_DIM.
-     * @throws DimException eccezione per MAX_DIM.
+     *
+     * @throws DimException     eccezione per MAX_DIM.
      * @throws FormatoException eccezione per il formato delle stringhe.
      */
     @Test
@@ -110,7 +112,7 @@ public class TestRubrica {
     @Test
     public void testFileIO() {
         int letti = rubrica.leggiContatti("fileContatti");
-        assertEquals(letti-1, rubrica.numEl());
+        assertEquals(letti - 1, rubrica.numEl());
         int scritti = rubrica.scriviContatti("nuovoFile");
         assertEquals(rubrica.numEl(), scritti);
     }
@@ -119,5 +121,6 @@ public class TestRubrica {
      * Test che parte dopo tutti e fa il reset della rubrica
      */
     @After
-    public void resetRubrica() {}
+    public void resetRubrica() {
+    }
 }

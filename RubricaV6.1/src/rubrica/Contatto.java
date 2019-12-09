@@ -9,7 +9,7 @@ import java.util.Objects;
 /**
  * @author Luca Borsalino
  * Date: 2019/12/09
- *
+ * <p>
  * Versione con aggiunta della lettura e della scrittura da/su file.
  * Aggiunti anche i test (funzionanti) per i due metodi aggiunti.
  * Aggiunta la regex per il nome, da capire perche' non funziona quella per l'email.
