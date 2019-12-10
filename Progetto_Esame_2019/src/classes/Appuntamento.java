@@ -3,7 +3,6 @@ package classes;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Locale;
 
 /**
  * @author Luca
@@ -70,6 +69,6 @@ public class Appuntamento {
 
     @Override
     public String toString() {
-        return getDataString() + " " + getOraObj() + " | " + getDurata() + " min, " + getNome() + ", " + getLuogo() + "\n";
+        return getDataString() + " " + getOraObj() + " | " + getDurata() + " min, " + getNome() + ", " + getLuogo();
     }
 }

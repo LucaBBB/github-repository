@@ -1,32 +1,59 @@
 package classes;
 
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
-/**
- * @author Luca
- * date: 2019-12-08
- *
- * Progetto esame di Programmazione ad Oggetti dell'Anno Accademico 2018/2019.
- * Classe Agenda che modella le funzionalita' di un'agenda (aggiunta/rimozione/modifica appuntamenti).
- */
 public class Agenda {
     ArrayList<Appuntamento> listaAppuntamenti;
 
-    public void init() {
+    public Agenda() {}
+
+    public void initAgenda() {
         listaAppuntamenti = new ArrayList<>();
     }
 
     /**
-     * Metodo che aggiunge un nuovo appuntamento alla lista degli appuntamenti.
-     * Versione molto base-base!!!
-     * @param nuovoAppuntamento l'appuntamento da aggiungere.
-     * @return  1 se l'appuntamento e' stato inserito;<br>
-     *         -1 se l'appuntamento e' gia presente, quindi non viene inserito.
-     */
-    public int addAppuntamento(Appuntamento nuovoAppuntamento) {
-        if (listaAppuntamenti.contains(nuovoAppuntamento))
+    public int addAppuntamento(Appuntamento a) {
+        if (listaAppuntamenti.contains(a))
             return -1;
-        listaAppuntamenti.add(nuovoAppuntamento);
+        listaAppuntamenti.add(a);
         return 1;
+    }*/
+
+    public int addAppuntamento(Appuntamento a) {
+        if (listaAppuntamenti.contains(a))
+            return -3;
+        if (listaAppuntamenti.isEmpty ()) {
+            listaAppuntamenti.add(a);
+            return 3;
+        }
+        for (int i=0; i<listaAppuntamenti.size(); i++) {
+            if (listaAppuntamenti.get(i).getDataObj().equals(a.getDataObj())) {
+                if (a.getOraObj().compareTo(listaAppuntamenti.get(i).getOraObj()) < 0) {
+                    if (a.getOraObj().plus(a.getDurata(), ChronoUnit.MINUTES).compareTo(listaAppuntamenti.get(i).getOraObj()) < 0) {
+                        if (i==0)
+                            listaAppuntamenti.add(0, a);
+                        else
+                            listaAppuntamenti.add(a);
+                        return 1;
+                    } else if (a.getOraObj().plus(a.getDurata(), ChronoUnit.MINUTES).compareTo(listaAppuntamenti.get(i).getOraObj()) == 0)
+                        return 0;
+                    else
+                        return -1;
+                }
+            }
+        }
+        Appuntamento last = listaAppuntamenti.get(listaAppuntamenti.size()-1);
+        if (last.getOraObj().plus(last.getDurata(), ChronoUnit.MINUTES).compareTo(a.getOraObj())<0) {
+            listaAppuntamenti.add(listaAppuntamenti.size(), a);
+            return 2;
+        }
+        return -2;
+    }
+
+    public void printListaAppuntamenti() {
+        for (Appuntamento appuntamento : listaAppuntamenti) {
+            System.out.println(appuntamento.toString());
+        }
     }
 }
