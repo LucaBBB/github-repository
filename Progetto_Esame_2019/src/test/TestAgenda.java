@@ -105,7 +105,7 @@ public class TestAgenda {
 
     /**
      * Test per verificare il corretto funzionamento del metodo findAppuntamentoByName.
-     * Ultimo aggiornamento: 11/12/19 - 11:38.
+     * Ultimo aggiornamento: 11/12/19 - 11:53.
      */
     @Test
     public void testFindAppuntamentoByName() {
