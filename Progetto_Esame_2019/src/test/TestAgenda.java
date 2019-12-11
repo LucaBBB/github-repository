@@ -15,9 +15,9 @@ public class TestAgenda {
         Appuntamento c = new Appuntamento("10-12-2019", "14:50", 15, "Mickey", "Ambulatorio");
         Agenda ag = new Agenda();
         ag.initAgenda();
-        assertEquals(3, ag.addAppuntamento(a));
+        assertEquals(0, ag.addAppuntamento(a));
         assertEquals(1, ag.addAppuntamento(b));
-        assertEquals(-1, ag.addAppuntamento(c));
+        assertEquals(-3, ag.addAppuntamento(c));
         ag.printListaAppuntamenti();
     }
 }
