@@ -4,6 +4,8 @@ import classes.Agenda;
 import classes.Appuntamento;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class TestAgenda {
@@ -80,5 +82,44 @@ public class TestAgenda {
         assertEquals(0, ag.removeAppuntamento(a));  // VERIFICO CHE NON CI SIA PIU' NULLA DA RIMUOVERE.
         System.out.println("... Stampa post eliminazione ...");
         ag.printListaAppuntamenti();
+    }
+
+    /**
+     * Test per verificare il corretto funzionamento del metodo findAppuntamento.
+     * Ultimo aggiornamento: 11/12/19 - 11:38.
+     */
+    @Test
+    public void testFindAppuntamento() {
+        Appuntamento a = new Appuntamento("10-12-2019", "15:00", 15, "Pippo", "Ambulatorio");
+        Appuntamento b = new Appuntamento("10-12-2019", "14:00", 45, "Pluto", "Ambulatorio");
+        Appuntamento c = new Appuntamento("10-12-2019", "14:50", 15, "Mickey", "Ambulatorio");
+        Agenda ag = new Agenda();
+        ag.initAgenda();
+        assertEquals(0, ag.addAppuntamento(a));
+        assertEquals(1, ag.addAppuntamento(b));
+        assertEquals(-3, ag.addAppuntamento(c));
+        // ... FINO A QUI HO AGGIUNTO a E b ...
+        assertEquals(a, ag.findAppuntamento(a));                // verifico di trovare a cercando a;
+        assertEquals(null, ag.findAppuntamento(c));    // verifico di trovare null cercando c, non esistendo.
+    }
+
+    /**
+     * Test per verificare il corretto funzionamento del metodo findAppuntamentoByName.
+     * Ultimo aggiornamento: 11/12/19 - 11:38.
+     */
+    @Test
+    public void testFindAppuntamentoByName() {
+        Appuntamento a = new Appuntamento("10-12-2019", "15:00", 15, "Pippo", "Ambulatorio");
+        Appuntamento b = new Appuntamento("10-12-2019", "14:00", 45, "Pluto", "Ambulatorio");
+        Appuntamento c = new Appuntamento("10-12-2019", "14:50", 15, "Mickey", "Ambulatorio");
+        Agenda ag = new Agenda();
+        ag.initAgenda();
+        assertEquals(0, ag.addAppuntamento(a));
+        assertEquals(1, ag.addAppuntamento(b));
+        assertEquals(-3, ag.addAppuntamento(c));
+        //assertEquals(1, ag.addAppuntamento(new Appuntamento("11-12-2019", "10:00", 30, "Pluto", "Ambulatorio")));
+        // ... FINO A QUI HO AGGIUNTO a E b ...
+        ArrayList<Appuntamento> trovati = ag.findAppuntamentoByName("Pluto");  // verifico che ci sia 1 contatto
+        assertEquals(1, trovati.size());                                    // con il nome passato in input.
     }
 }
