@@ -8,6 +8,10 @@ import static org.junit.Assert.assertEquals;
 
 public class TestAgenda {
 
+    /**
+     * Test per l'aggiunta di appuntamenti in rubrica.
+     * Ultimo aggiornamento: 11/12/19 - 11:19
+     */
     @Test
     public void testAggiunta() {
         Appuntamento a = new Appuntamento("10-12-2019", "15:00", 15, "Pippo", "Ambulatorio");
