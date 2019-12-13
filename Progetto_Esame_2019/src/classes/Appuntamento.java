@@ -15,11 +15,11 @@ import java.time.format.DateTimeFormatter;
  */
 
 public class Appuntamento {
-    LocalDate data;
-    LocalTime ora;
-    int durata;         // espressa in minuti
-    String nome;
-    String luogo;
+    private LocalDate data;
+    private LocalTime ora;
+    private int durata;         // espressa in minuti
+    private String nome;
+    private String luogo;
 
     static DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
     DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH-mm");

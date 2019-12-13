@@ -49,9 +49,9 @@ public class main {
             else if (scelta.equals("3")) {
                 ag.menuDelete();
             }
-            //else if (scelta.equals("4")) {
-                //ag.menuRicerca();
-            //}
+            else if (scelta.equals("4")) {
+                ag.menuRicerche();
+            }
 
             menuScelta();
             scelta = sc.next();
@@ -65,9 +65,10 @@ public class main {
      */
     public static void menuScelta() {
         System.out.println("--- INTERFACCIA GRAFICA DELL'AGENDA ---");
-        System.out.println("Digitare 1 per visualizzare i contatti: ");
-        System.out.println("Digitare 2 per aggiungere un contatto:  ");
-        System.out.println("Digitare 3 per eliminare un contatto:   ");
-        System.out.println("Digitare exit per uscire:               ");
+        System.out.println("Digitare 1 per visualizzare i contatti:");
+        System.out.println("Digitare 2 per aggiungere un contatto:");
+        System.out.println("Digitare 3 per eliminare un contatto:");
+        System.out.println("Digitare 4 per le ricerche:");
+        System.out.print("Digitare exit per uscire: ");
     }
 }

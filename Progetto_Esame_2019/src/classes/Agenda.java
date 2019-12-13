@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 /**
  * @author Luca
- * date: 11/12/2019
+ * date: 13/12/2019
  * <p>
  * Progetto di Programmazione ad Oggetti 2018
  * <p>
@@ -22,7 +22,11 @@ import java.util.Scanner;
  */
 public class Agenda {
     ArrayList<Appuntamento> listaAppuntamenti;
-    Scanner sc2 = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
+
+    String regexDate = "^([0-2][0-9]||3[0-1])-(0[0-9]||1[0-2])-([0-9][0-9])?[0-9][0-9]$";
+    String regexTime = "^(0[0-9]|1[0-9]|2[0-3]|[0-9])-[0-5][0-9]$";
+    String regexName = "[A-Z]([a-z]+)";
 
     public Agenda() {
         initAgenda();
@@ -43,44 +47,29 @@ public class Agenda {
         }
         if (listaAppuntamenti.contains(a))
             return -1;
-        if (a.getDataObj().compareTo(listaAppuntamenti.get(0).getDataObj())<0) {
+        if (a.getDataObj().compareTo(listaAppuntamenti.get(0).getDataObj()) < 0) {
             listaAppuntamenti.add(0, a);
             return 1;
         }
-        for (int i=1; i<listaAppuntamenti.size(); i++) {
+        for (int i = 1; i < listaAppuntamenti.size(); i++) {
             Appuntamento actual = listaAppuntamenti.get(i);
-            if (a.getDataObj().compareTo(actual.getDataObj())<0) {
+            if (a.getDataObj().compareTo(actual.getDataObj()) < 0) {
                 listaAppuntamenti.add(i, a);
                 return 1;
             }
-            if (a.getDataObj().compareTo(actual.getDataObj())==0) {
-                if (a.getOraObj().plus(a.getDurata(), ChronoUnit.MINUTES).compareTo(actual.getOraObj())<=0 && !a.getLuogo().equals(actual.getLuogo())) {
+            if (a.getDataObj().compareTo(actual.getDataObj()) == 0) {
+                if (a.getOraObj().plus(a.getDurata(), ChronoUnit.MINUTES).compareTo(actual.getOraObj()) < 0 && !a.getLuogo().equals(actual.getLuogo())) {
                     listaAppuntamenti.add(i, a);
                     return 1;
                 }
             }
         }
-        Appuntamento last = listaAppuntamenti.get(listaAppuntamenti.size()-1);
-        if (a.getDataObj().compareTo(last.getDataObj())>0 || a.getDataObj().compareTo(last.getDataObj())==0 && a.getOraObj().compareTo(last.getOraObj())>0)
-        {
+        Appuntamento last = listaAppuntamenti.get(listaAppuntamenti.size() - 1);
+        if (a.getDataObj().compareTo(last.getDataObj()) > 0 || a.getDataObj().compareTo(last.getDataObj()) == 0 && a.getOraObj().compareTo(last.getOraObj()) > 0) {
             listaAppuntamenti.add(listaAppuntamenti.size(), a);
             return 1;
         }
         return -1;
-    }
-
-    /**
-     * Metodo che permette di rimuovere un appuntamento dall'agenda.
-     *
-     * @param a l'appuntamento da rimuovere
-     * @return 1 se l'appuntamento e' stato rimosso dall'agenda;<br>
-     * 0 se l'agenda e' vuota, quindi non ha rimosso;<br>
-     * -1 se l'appuntamento non e' stato rimosso perche' non era presente nell'agenda.
-     */
-    public boolean removeAppuntamento(Appuntamento a) {
-        if (listaAppuntamenti.isEmpty())
-            return false;
-        return listaAppuntamenti.remove(a);
     }
 
     /**
@@ -99,22 +88,25 @@ public class Agenda {
     }
 
     /**
-     * Metodo che permette di cercare un appuntamento uguale a quello dato in input.
+     * Metodo che serve a stampare tutti gli elementi presenti nella lista data come parametro.
      *
-     * @param a l'appuntamento da cercare nell'agenda.
-     * @return l'appuntamento trovato;<br>
-     * se l'appuntamento non e' stato trovato, null.
+     * @param listaDaStampare la lista da stampare.
      */
-    public Appuntamento findAppuntamento(Appuntamento a) {
-        for (Appuntamento appuntamento : listaAppuntamenti) {
-            if (appuntamento == a)
-                return appuntamento;
+    public void genericPrintArrayList(ArrayList<Appuntamento> listaDaStampare) {
+        if (listaDaStampare.isEmpty())
+            System.out.println("--- NESSUN RISULTATO ---");
+        else {
+            System.out.println("--- STAMPA RISULTATI ---");
+            for (Appuntamento appuntamento : listaDaStampare) {
+                System.out.println(appuntamento.toString());
+            }
+            System.out.println("---- FINE STAMPA ----");
         }
-        return null;
     }
 
     /**
      * Metodo che cerca tutti gli appuntamenti che possiedono il campo nome come quello passato in input.
+     *
      * @param nome parametro di ricerca.
      * @return l'ArrayList contenente tutti gli appuntamenti trovati, oppure null se non sono stati trovati.
      */
@@ -129,18 +121,26 @@ public class Agenda {
 
     /**
      * Metodo che cerca tutti gli appuntamenti che possiedono il campo luogo come quello passato in input.
-     * @param place parametro di ricerca.
+     *
+     * @param data parametro di ricerca.
      * @return l'ArrayList contenente tutti gli appuntamenti trovati, oppure null se non sono stati trovati.
      */
-    public ArrayList<Appuntamento> findAppuntamentoByPlace(String place) {
+    public ArrayList<Appuntamento> findAppuntamentoByData(String data) {
         ArrayList<Appuntamento> trovati = new ArrayList<>();
         for (Appuntamento appuntamento : listaAppuntamenti) {
-            if (appuntamento.getLuogo().equals(place))
+            if (appuntamento.getDataString().equals(data))
                 trovati.add(appuntamento);
         }
         return trovati;
     }
 
+    /**
+     * Metodo che permette di leggere da file tutti gli appuntamenti presenti in agenda;
+     * inoltre, dopo averli letti, vengono inseriti in una ArrayList di Appuntamento, per poter essere gestiti.
+     *
+     * @param fileName il nome del file dal quale leggere gli appuntamenti.
+     * @return il numero di appuntamenti letti dal file.
+     */
     public int readFile(String fileName) {
         try {
             BufferedReader in = new BufferedReader(new FileReader(fileName));
@@ -155,7 +155,6 @@ public class Agenda {
                 String place = dati[4].trim();
                 linea = in.readLine();
                 letti++;
-                //System.out.println("Ho letto " + nome + ", " + email + ", " + tel);
                 Appuntamento a = new Appuntamento(date, time, Integer.parseInt(duration), name, place);
                 listaAppuntamenti.add(a);
             }
@@ -171,6 +170,13 @@ public class Agenda {
         return 0;
     }
 
+    /**
+     * Metodo che permette di scrivrere su file gli appuntamenti presenti nell'ArrayList di Appuntamento.
+     *
+     * @param fileName il nome del file su cui scrivere.
+     * @return il numero di appuntamenti scritti sul file.
+     * @throws IOException eccezione per IO.
+     */
     public int printOnFile(String fileName) throws IOException {
         int scritti = 0;
         PrintWriter out = new PrintWriter(new FileWriter(fileName));
@@ -182,51 +188,62 @@ public class Agenda {
         return scritti;
     }
 
+    /**
+     * Metodo che richiama il metodo per stampare la lista degli appuntamenti.
+     */
     public void menuViewList() {
         printListaAppuntamenti();
     }
 
-    public void menuAdd() throws DurataException, NameFormatException, DateFormatException, TimeFormatException, IOException {
-        String date;
-        String time;
+    /**
+     * Metodo che dopo aver richiesto data, ora, durata, nome e luogo, se questi campi sono validi, crea un appuntamento
+     * e lo inserisce nella lista richiamando il metodo addAppuntamento().
+     *
+     * @throws DurataException     eccezione per la durata;
+     * @throws NameFormatException eccezione per il formato del nome;
+     * @throws DateFormatException eccezione per il formato della data;
+     * @throws TimeFormatException eccezione per il formato dell'ora.
+     */
+    public void menuAdd() throws DurataException, NameFormatException, DateFormatException, TimeFormatException {
+        String date, time, name, place;
         int duration;
-        String name;
-        String place;
 
         System.out.print("Inserire la data dell'appuntamento (gg-MM-aaaa): ");
-        date = sc2.next();
+        date = scanner.next();
+        if (!date.matches(regexDate) || LocalDate.parse(date, Appuntamento.dateFormatter).isBefore(LocalDate.now()))
+            throw new DateFormatException();
         System.out.print("Inserire l'ora dell'appuntamento (HH-mm): ");
-        time = sc2.next();
+        time = scanner.next();
+        if (!time.matches(regexTime))
+            throw new TimeFormatException();
         System.out.print("Inserire la durata dell'appuntamento (>= 5 minuti): ");
-        duration = sc2.nextInt();
+        duration = scanner.nextInt();
         System.out.print("Inserire il nome: ");
-        name = sc2.next();
+        name = scanner.next();
+        if (!name.matches(regexName))
+            throw new NameFormatException();
         System.out.print("Inserire il luogo dell'appuntamento: ");
-        place = sc2.next();
+        place = scanner.next();
 
-        //if (checkDati(date, time, name)) {
-            Appuntamento a = new Appuntamento(date, time, duration, name, place);
-            int addingResult = addAppuntamento(a);
+        Appuntamento a = new Appuntamento(date, time, duration, name, place);
+        int addingResult = addAppuntamento(a);
 
-            if (addingResult == 1) {
-                System.out.println(a.toString() + "\n" + "Aggiunto con successo!");
-            }
-       // }
+        if (addingResult == 1)
+            System.out.println(a.toString() + "\n" + "Aggiunto con successo!");
+        else
+            System.out.println(a.toString() + "\n" + "Appuntamento non aggiunto!");
     }
 
-    public void menuDelete() {
-        //Scanner sc = new Scanner(System.in);
-
+    public void menuDelete() throws DateFormatException {
         System.out.println("--- ELIMINAZIONE CONTATTO ---");
         System.out.print("Inserire la data dell'appuntamento (gg-MM-aaaa): ");
-        String date = sc2.next();
-        //while (!LocalDate.parse(date, Appuntamento.dateFormatter).isAfter(LocalDate.now()))
-            // questa e' una implementazione da fare per verificare che la data che si sta inserendo
-            // non sia antecedente al momento in cui si usa il software!
+        String date = scanner.next();
+        if (!date.matches(regexDate) || LocalDate.parse(date, Appuntamento.dateFormatter).isBefore(LocalDate.now()))
+            throw new DateFormatException();
         System.out.print("Inserire l'ora dell'appuntamento (HH-mm): ");
-        String time = sc2.next();
+        String time = scanner.next();
         System.out.print("Inserire il nome: ");
-        String name = sc2.next();
+        String name = scanner.next();
 
         boolean cancellato = deleteByDateTimeName(date, time, name);
         if (cancellato)
@@ -236,37 +253,35 @@ public class Agenda {
     }
 
     public void menuRicerche() {
+        String ricerca;
+
         System.out.println("--- MENU RICERCHE ---");
         System.out.println("Inserire nome per effettuare una ricerca per nome: ");
-    }
+        System.out.println("Inserire data per effettuare una ricerca per data: ");
+        String parametroRicerca = scanner.next();
 
-    public boolean checkDati(String date, String time, String name) throws NameFormatException, DateFormatException, TimeFormatException {
-        String regexDate = "(0[1-9]|[12][0-9]|3[01])-(0[1-9]|[10-12]-(2[0-9])[0-9]{2})";
-        String regexTime = "^(0[0-9]|1[0-9]|2[0-3]|[0-9])-[0-5][0-9]$";
-        String regexName = "[A-Z]([a-z]+)";
-        if (!date.matches(regexDate))
-            throw new DateFormatException();
-        if (!time.matches(regexTime))
-            throw new TimeFormatException();
-        if (!name.matches(regexName))
-            throw new NameFormatException();
-        return true;
-    }
-
-    public Appuntamento getAppuntamentoByIndex(int index) {
-        return listaAppuntamenti.get(index);
+        if (parametroRicerca.equals("nome")) {
+            System.out.println("Inserire il nome da cercare: ");
+            ricerca = scanner.next();
+            genericPrintArrayList(findAppuntamentoByName(ricerca));
+        } else if (parametroRicerca.equals("data")) {
+            System.out.println("Inserire la data da cercare: ");
+            ricerca = scanner.next();
+            genericPrintArrayList(findAppuntamentoByData(ricerca));
+        }
     }
 
     /**
      * Metodo che permette di eliminare dall'agenda un contatto che abbia data, ora e nome coincidenti a quelli
      * passati come parametro di ricerca.
+     *
      * @param date data dell'appuntamento da eliminare;
      * @param time ora dell'appuntamento da eliminare;
      * @param name nome della persona dell'appuntamento da eliminare.
      * @return true se l'appuntamento e' stato elimanto, false altrimenti.
      */
     public boolean deleteByDateTimeName(String date, String time, String name) {
-        for (int i=0; i<listaAppuntamenti.size(); i++) {
+        for (int i = 0; i < listaAppuntamenti.size(); i++) {
             Appuntamento actual = listaAppuntamenti.get(i);
             if (actual.getDataString().equals(date) && actual.getOraString().equals(time) && actual.getNome().equals(name)) {
                 listaAppuntamenti.remove(i);
