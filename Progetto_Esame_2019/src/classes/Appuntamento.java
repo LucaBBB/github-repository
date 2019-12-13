@@ -1,5 +1,7 @@
 package classes;
 
+import exception.DurataException;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -19,12 +21,16 @@ public class Appuntamento {
     String nome;
     String luogo;
 
-    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+    static DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+    DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH-mm");
 
-    public Appuntamento(String date, String time, int duration, String name, String place) {
+    public Appuntamento(String date, String time, int duration, String name, String place) throws DurataException {
         data = LocalDate.parse(date, dateFormatter);
-        ora = LocalTime.parse(time);
-        this.durata = duration;
+        ora = LocalTime.parse(time, timeFormatter);
+        if (duration<5)
+            throw new DurataException();
+        else
+            this.durata = duration;
         this.nome = name;
         this.luogo = place;
     }
@@ -53,7 +59,7 @@ public class Appuntamento {
         return ora;
     }
 
-    public String getOraString() {return ora.toString();}
+    public String getOraString() {return ora.format(timeFormatter);}
 
     public int getDurata() {
         return durata;
@@ -69,6 +75,6 @@ public class Appuntamento {
 
     @Override
     public String toString() {
-        return getDataString() + " " + getOraObj() + " | " + getDurata() + " min, " + getNome() + ", " + getLuogo();
+        return getDataString() + "," + getOraString() + "," + getDurata() + "," + getNome() + "," + getLuogo();
     }
 }
