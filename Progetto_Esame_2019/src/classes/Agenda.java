@@ -32,13 +32,18 @@ public class Agenda {
         initAgenda();
     }
 
+    /**
+     * Metodo che inizializza l'ArrayList ed inserisce gli appuntamenti letti dal file di testo.
+     */
     public void initAgenda() {
         listaAppuntamenti = new ArrayList<>();
         readFile("File_Appuntamenti_Test");
     }
 
     /**
-     * Versione super base dell'add di appuntamenti
+     * Metodo che permette di aggiungere un nuovo appuntamento all'Agenda.
+     * @param a l'appuntamento da aggiungere.
+     * @return 1 se il nuovo appuntamento e' stato aggiunto, -1 altrimenti.
      */
     public int addAppuntamento(Appuntamento a) {
         if (listaAppuntamenti.isEmpty()) {
@@ -81,14 +86,14 @@ public class Agenda {
         else {
             System.out.println("--- STAMPA AGENDA ---");
             for (Appuntamento appuntamento : listaAppuntamenti) {
-                System.out.println(appuntamento.toString());
+                System.out.println(appuntamento.toStringModificato());
             }
             System.out.println("---- FINE STAMPA ----");
         }
     }
 
     /**
-     * Metodo che serve a stampare tutti gli elementi presenti nella lista data come parametro.
+     * Metodo di stampa generico che serve a stampare tutti gli elementi presenti nella lista data come parametro.
      *
      * @param listaDaStampare la lista da stampare.
      */
@@ -196,8 +201,10 @@ public class Agenda {
     }
 
     /**
-     * Metodo che dopo aver richiesto data, ora, durata, nome e luogo, se questi campi sono validi, crea un appuntamento
+     * Metodo che richiede data, ora, durata, nome e luogo, e se questi campi sono validi, crea un appuntamento
      * e lo inserisce nella lista richiamando il metodo addAppuntamento().
+     * Dopodiche', chiama il metodo per cancellare con data, ora e nome e restituisce a video l'esito della
+     * cancellazione.
      *
      * @throws DurataException     eccezione per la durata;
      * @throws NameFormatException eccezione per il formato del nome;
@@ -234,6 +241,11 @@ public class Agenda {
             System.out.println(a.toString() + "\n" + "Appuntamento non aggiunto!");
     }
 
+    /**
+     * Metodo che richiede data, ora e nome e se questi campi sono validi, cerca nella lista di appuntamenti se e'
+     * possibile eliminare il record con i campi corrispondenti a quelli dati in input.
+     * @throws DateFormatException eccezione per il formato della data errata.
+     */
     public void menuDelete() throws DateFormatException {
         System.out.println("--- ELIMINAZIONE CONTATTO ---");
         System.out.print("Inserire la data dell'appuntamento (gg-MM-aaaa): ");
@@ -252,6 +264,11 @@ public class Agenda {
             System.out.println("Contatto non trovato.");
     }
 
+    /**
+     * Metodo che richiede all'utente di decidere se effettuare la ricerca per nome, inserendo successivamente il nome
+     * parametro di ricerca, oppure per data, inserendo succcessivamenti la data parametro di ricerca.
+     * Dopodiche', chiama il metodo che stampa la lista ottenuta dalla ricerca per nome o per data.
+     */
     public void menuRicerche() {
         String ricerca;
 

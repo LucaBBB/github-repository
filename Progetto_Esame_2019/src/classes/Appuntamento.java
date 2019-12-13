@@ -77,4 +77,8 @@ public class Appuntamento {
     public String toString() {
         return getDataString() + "," + getOraString() + "," + getDurata() + "," + getNome() + "," + getLuogo();
     }
+
+    public String toStringModificato() {
+        return getDataString() + " ore " + getOraString() + " | " + getDurata() + " minuti, " + getNome() + ", " + getLuogo();
+    }
 }

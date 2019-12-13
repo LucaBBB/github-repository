@@ -12,9 +12,15 @@ import java.util.Scanner;
  * date: 13/12/2019
  * Versione con add funzionante ed implementazione del main.
  */
-public class main {
+public class Main {
 
-    public static void main(String [] args) throws DurataException, NameFormatException, TimeFormatException, DateFormatException, IOException {
+    /**
+     * TO DO:
+     *
+     * - METODO PER LA MODIFICA DI UNA APPUNTAMENTO
+     */
+
+    public static void main(String[] args) throws DurataException, NameFormatException, TimeFormatException, DateFormatException, IOException {
         engine();
     }
 
@@ -40,19 +46,20 @@ public class main {
         Scanner sc = new Scanner(System.in);
         String scelta = sc.next();
         while (!scelta.equals("exit")) {
-            if (scelta.equals("1")) {
-                ag.menuViewList();
+            switch (scelta) {
+                case "1":
+                    ag.menuViewList();
+                    break;
+                case "2":
+                    ag.menuAdd();
+                    break;
+                case "3":
+                    ag.menuDelete();
+                    break;
+                case "4":
+                    ag.menuRicerche();
+                    break;
             }
-            else if (scelta.equals("2")) {
-                ag.menuAdd();
-            }
-            else if (scelta.equals("3")) {
-                ag.menuDelete();
-            }
-            else if (scelta.equals("4")) {
-                ag.menuRicerche();
-            }
-
             menuScelta();
             scelta = sc.next();
         }
@@ -64,11 +71,11 @@ public class main {
      * Metodo che mostra un piccolo menu con le scelte che possono essere eseguite dall'utente.
      */
     public static void menuScelta() {
-        System.out.println("--- INTERFACCIA GRAFICA DELL'AGENDA ---");
-        System.out.println("Digitare 1 per visualizzare i contatti:");
-        System.out.println("Digitare 2 per aggiungere un contatto:");
-        System.out.println("Digitare 3 per eliminare un contatto:");
-        System.out.println("Digitare 4 per le ricerche:");
+        System.out.println("--- MENU' PRINCIPALE DELL'AGENDA ---");
+        System.out.println("Digitare 1 per visualizzare gli appuntamenti:");
+        System.out.println("Digitare 2 per aggiungere un appuntamento:");
+        System.out.println("Digitare 3 per eliminare un appuntamento:");
+        System.out.println("Digitare 4 per le ricerche di appuntamenti:");
         System.out.print("Digitare exit per uscire: ");
     }
 }
