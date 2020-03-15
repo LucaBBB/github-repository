@@ -115,4 +115,35 @@ public class BFS {
         }
         return tree;
     }
+
+    /**
+     * Metodo che permette di salvare in un array di interi l'ordine di visita di ciascun nodo visitato tramite BFS.
+     *
+     * @param sorgente la sorgente da cui partire per visitare il grafo.
+     * @return l'array di interi contenente l'ordine di visita di ciascun nodo.
+     */
+    public int[] getOrderOfVisit(int sorgente) {
+        int[] ordineDiVisita = new int[grafo.getOrder()];
+
+        ArrayList<Integer> Coda = new ArrayList<>();
+        ArrayList<Integer> Scoperti = new ArrayList<>();
+
+        Coda.add(sorgente);
+        Scoperti.add(sorgente);
+        ordineDiVisita[sorgente] = 0;
+        int i = 1;
+
+        while (!Coda.isEmpty()) {
+            int u = Coda.remove(0);
+            for (int v : grafo.getNeighbors(u)) {
+                if (!Scoperti.contains(v)) {
+                    Coda.add(v);
+                    Scoperti.add(v);
+                    ordineDiVisita[v] = i;
+                    i++;
+                }
+            }
+        }
+        return ordineDiVisita;
+    }
 }

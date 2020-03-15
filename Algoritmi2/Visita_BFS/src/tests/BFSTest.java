@@ -149,6 +149,21 @@ public class BFSTest {
         bfsTest = new BFS(grafo);
         GraphInterface albero = bfsTest.bfsTree(0);
         assertEquals(4, albero.getOrder());
-        assertEquals(3, albero.getEdgeNum());
+        assertEquals(albero.getOrder()-1, albero.getEdgeNum());
+    }
+
+    /**
+     * Metodo che testa il corretto funzionamento della creazione di un'array contenente l'ordine di visita
+     * dei nodi.
+     */
+    @Test
+    public void testOrdineDiVisita() {
+        grafo = new UndirectedGraph("4;0 2;0 1;2 3;1 3");
+        bfsTest = new BFS(grafo);
+        int[] ordineDiVisita = bfsTest.getOrderOfVisit(2);
+        assertEquals(0, ordineDiVisita[2]);
+        assertEquals(1, ordineDiVisita[0]);
+        assertEquals(2, ordineDiVisita[3]);
+        assertEquals(3, ordineDiVisita[1]);
     }
 }

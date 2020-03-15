@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e00122ba-f077-4a23-8e8e-343bc26ca209" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Visita_BFS/classes/BFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Visita_BFS/classes/BFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Visita_BFS/tests/BFSTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Visita_BFS/tests/BFSTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/BFS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/BFSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/BFSTest.java" afterDir="false" />
     </list>
@@ -65,7 +62,7 @@
       <recent name="C:\Users\PC-di-Luca\Desktop\Visita_BFS" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BFSTest">
+  <component name="RunManager" selected="JUnit.BFSTest.testOrdineDiVisita">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -111,23 +108,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BFSTest.testDimensioneAlbero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Visita_BFS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.BFSTest" />
-      <option name="METHOD_NAME" value="testDimensioneAlbero" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BFSTest.testDimensioneAlbero2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Visita_BFS" />
       <extension name="coverage">
@@ -162,6 +142,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BFSTest.testOrdineDiVisita" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Visita_BFS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.BFSTest" />
+      <option name="METHOD_NAME" value="testOrdineDiVisita" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -189,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BFSTest.testOrdineDiVisita" />
+        <item itemvalue="JUnit.BFSTest.testDimensioneAlbero4" />
         <item itemvalue="JUnit.BFSTest" />
         <item itemvalue="JUnit.BFSTest.testArchiAlbero" />
         <item itemvalue="JUnit.BFSTest.testDimensioneAlbero2" />
-        <item itemvalue="JUnit.BFSTest.testDimensioneAlbero4" />
-        <item itemvalue="JUnit.BFSTest.testDimensioneAlbero" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +208,9 @@
       <workItem from="1584005527746" duration="2636000" />
       <workItem from="1584177438419" duration="3076000" />
       <workItem from="1584265349251" duration="730000" />
-      <workItem from="1584276007318" duration="4203000" />
+      <workItem from="1584276007318" duration="5037000" />
+      <workItem from="1584287985220" duration="6000" />
+      <workItem from="1584290786587" duration="790000" />
     </task>
     <task id="LOCAL-00001" summary="Aggiunto primo progetto su visita BFS">
       <created>1584276053239</created>
@@ -234,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584277936591</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Aggiunto il metodo utile a creare l'albero BFS ricoprente e due test per verificare la corretta dimensione dell'albero creato.">
+      <created>1584280414197</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584280414197</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,17 +250,18 @@
     <MESSAGE value="Aggiunto primo progetto su visita BFS" />
     <MESSAGE value="Piccole modifiche" />
     <MESSAGE value="Aggiunti i test per verificare il corretto funzionamento della distanza di un nodo dalla sorgente." />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunti i test per verificare il corretto funzionamento della distanza di un nodo dalla sorgente." />
+    <MESSAGE value="Aggiunto il metodo utile a creare l'albero BFS ricoprente e due test per verificare la corretta dimensione dell'albero creato." />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunto il metodo utile a creare l'albero BFS ricoprente e due test per verificare la corretta dimensione dell'albero creato." />
   </component>
   <component name="WindowStateProjectService">
     <state x="227" y="0" width="506" height="1040" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1584278704570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="227" y="0" width="506" height="1040" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1584278704570" />
-    <state x="1007" y="118" key="CommitChangelistDialog2" timestamp="1584277935747">
+    <state x="664" y="118" key="CommitChangelistDialog2" timestamp="1584291708541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1007" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584277935747" />
+    <state x="664" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584291708541" />
     <state x="274" y="242" key="DetectedRootsChooserDialog" timestamp="1583931445486">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -263,22 +270,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="300" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584278703289" />
-    <state width="1877" height="234" key="GridCell.Tab.0.bottom" timestamp="1584280350926">
+    <state width="914" height="233" key="GridCell.Tab.0.bottom" timestamp="1584291714065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="234" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584280350926" />
-    <state width="1877" height="234" key="GridCell.Tab.0.center" timestamp="1584280350926">
+    <state width="914" height="233" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584291714065" />
+    <state width="914" height="233" key="GridCell.Tab.0.center" timestamp="1584291714065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="234" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584280350926" />
-    <state width="1877" height="234" key="GridCell.Tab.0.left" timestamp="1584280350926">
+    <state width="914" height="233" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584291714065" />
+    <state width="914" height="233" key="GridCell.Tab.0.left" timestamp="1584291714065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="234" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584280350926" />
-    <state width="1877" height="234" key="GridCell.Tab.0.right" timestamp="1584280350926">
+    <state width="914" height="233" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584291714065" />
+    <state width="914" height="233" key="GridCell.Tab.0.right" timestamp="1584291714065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="234" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584280350926" />
+    <state width="914" height="233" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584291714065" />
     <state width="1062" height="347" key="GridCell.Tab.1.bottom" timestamp="1584008231892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -299,18 +306,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="499" y="125" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584278182956" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1584277940687">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1584280415709">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584277940687" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584280415709" />
     <state x="258" y="425" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584007885679">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="258" y="425" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1584007885679" />
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584276130641">
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584290888543">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584276130641" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584290888543" />
+    <state x="136" y="244" key="run.anything.popup" timestamp="1584290911605">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="136" y="244" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584290911605" />
     <state x="1103" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1584278587111">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
