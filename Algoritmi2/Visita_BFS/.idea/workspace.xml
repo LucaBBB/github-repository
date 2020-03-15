@@ -39,6 +39,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -209,10 +210,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1007" y="118" key="CommitChangelistDialog2" timestamp="1584276043363">
+    <state x="1007" y="118" key="CommitChangelistDialog2" timestamp="1584276051932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1007" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584276043363" />
+    <state x="1007" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584276051932" />
     <state x="274" y="242" key="DetectedRootsChooserDialog" timestamp="1583931445486">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
