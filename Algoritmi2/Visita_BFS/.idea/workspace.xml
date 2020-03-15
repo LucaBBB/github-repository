@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e00122ba-f077-4a23-8e8e-343bc26ca209" name="Default Changelist" comment="" />
+    <list default="true" id="e00122ba-f077-4a23-8e8e-343bc26ca209" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Visita_BFS/classes/BFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Visita_BFS/classes/BFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Visita_BFS/tests/BFSTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Visita_BFS/tests/BFSTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/BFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/BFSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/BFSTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +35,7 @@
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1Yz2pfLweaUlEsCb3tgdFiSAZpI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -86,7 +93,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BFSTest.testBFSOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BFSTest.testDistanza1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Visita_BFS" />
       <extension name="coverage">
         <pattern>
@@ -96,14 +103,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.BFSTest" />
-      <option name="METHOD_NAME" value="testBFSOrder" />
+      <option name="METHOD_NAME" value="testDistanza1" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BFSTest.testInitNumeroNodiVisitati" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BFSTest.testDistanza2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Visita_BFS" />
       <extension name="coverage">
         <pattern>
@@ -113,14 +120,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.BFSTest" />
-      <option name="METHOD_NAME" value="testInitNumeroNodiVisitati" />
+      <option name="METHOD_NAME" value="testDistanza2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BFSTest.testScoperti2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BFSTest.testDistanzaGenerico" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Visita_BFS" />
       <extension name="coverage">
         <pattern>
@@ -130,7 +137,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.BFSTest" />
-      <option name="METHOD_NAME" value="testScoperti2" />
+      <option name="METHOD_NAME" value="testDistanzaGenerico" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -182,10 +189,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.BFSTest" />
-        <item itemvalue="JUnit.BFSTest.testInitNumeroNodiVisitati" />
-        <item itemvalue="JUnit.BFSTest.testBFSOrder" />
+        <item itemvalue="JUnit.BFSTest.testDistanzaGenerico" />
+        <item itemvalue="JUnit.BFSTest.testDistanza2" />
+        <item itemvalue="JUnit.BFSTest.testDistanza1" />
         <item itemvalue="JUnit.BFSTest.testScopertiGenerico" />
-        <item itemvalue="JUnit.BFSTest.testScoperti2" />
       </list>
     </recent_temporary>
   </component>
@@ -203,17 +210,38 @@
       <workItem from="1584005527746" duration="2636000" />
       <workItem from="1584177438419" duration="3076000" />
       <workItem from="1584265349251" duration="730000" />
+      <workItem from="1584276007318" duration="1862000" />
     </task>
+    <task id="LOCAL-00001" summary="Aggiunto primo progetto su visita BFS">
+      <created>1584276053239</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584276053239</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Piccole modifiche">
+      <created>1584276173696</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584276173696</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Aggiunto primo progetto su visita BFS" />
+    <MESSAGE value="Piccole modifiche" />
+    <option name="LAST_COMMIT_MESSAGE" value="Piccole modifiche" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="1007" y="118" key="CommitChangelistDialog2" timestamp="1584276051932">
+    <state x="1007" y="118" key="CommitChangelistDialog2" timestamp="1584276172807">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1007" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584276051932" />
+    <state x="1007" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584276172807" />
     <state x="274" y="242" key="DetectedRootsChooserDialog" timestamp="1583931445486">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -222,22 +250,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="300" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583931444144" />
-    <state width="1243" height="281" key="GridCell.Tab.0.bottom" timestamp="1584180520848">
+    <state width="914" height="234" key="GridCell.Tab.0.bottom" timestamp="1584277785602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1243" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584180520848" />
-    <state width="1243" height="281" key="GridCell.Tab.0.center" timestamp="1584180520848">
+    <state width="914" height="234" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584277785602" />
+    <state width="914" height="234" key="GridCell.Tab.0.center" timestamp="1584277785602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1243" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584180520848" />
-    <state width="1243" height="281" key="GridCell.Tab.0.left" timestamp="1584180520848">
+    <state width="914" height="234" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584277785602" />
+    <state width="914" height="234" key="GridCell.Tab.0.left" timestamp="1584277785602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1243" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584180520848" />
-    <state width="1243" height="281" key="GridCell.Tab.0.right" timestamp="1584180520848">
+    <state width="914" height="234" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584277785602" />
+    <state width="914" height="234" key="GridCell.Tab.0.right" timestamp="1584277785602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1243" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584180520848" />
+    <state width="914" height="234" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584277785602" />
     <state width="1062" height="347" key="GridCell.Tab.1.bottom" timestamp="1584008231892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -258,6 +286,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="101" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584178108620" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1584276178145">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584276178145" />
     <state x="258" y="425" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584007885679">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

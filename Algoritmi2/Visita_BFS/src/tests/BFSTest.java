@@ -80,12 +80,41 @@ public class BFSTest {
     }
 
     /**
+     * Metodo che testa la distanza in un grafo con un solo nodo.
+     */
     @Test
-    public void testDistanza() {
+    public void testDistanza1() {
+        GraphInterface grafo = new UndirectedGraph(1);
+        BFS bfsTest = new BFS(grafo);
+        assertEquals(0, bfsTest.getDistance(0)[0]);
+    }
+
+    /**
+     * Metodo che testa la distanza in un grafo con due nodi ed un arco che gli unisce.
+     */
+    @Test
+    public void testDistanza2() {
+        GraphInterface grafo = new UndirectedGraph("2;0 1");
+        BFS bfsTest = new BFS(grafo);
+        int[] distanze = bfsTest.getDistance(0);
+        assertEquals(0, distanze[0]);
+        assertEquals(1, distanze[1]);
+    }
+
+    /**
+     * Metodo che testa su un grafo non orientato generico il corretto funzionamento del
+     * calcolo della distanza dalla sorgente di un nodo.
+     */
+    @Test
+    public void testDistanzaGenerico() {
         GraphInterface grafo = new UndirectedGraph("4;0 2;0 1;2 3;1 3");
         BFS bfsTest = new BFS(grafo);
-
-    }*/
+        int[] distanze = bfsTest.getDistance(0);
+        assertEquals(0, distanze[0]);
+        assertEquals(1, distanze[1]);
+        assertEquals(1, distanze[2]);
+        assertEquals(2, distanze[3]);
+    }
 
     public void printArray(ArrayList<Integer> daStampare) {
         for (Integer integer : daStampare) {

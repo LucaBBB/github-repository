@@ -1,6 +1,7 @@
 package classes;
 
 import it.uniupo.graphLib.GraphInterface;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -90,20 +91,22 @@ public class BFS {
 
     public int[] getDistance(int sorgente) { //resituisce le distanza di ciascun nodo da sorg
         int[] distanza = new int[grafo.getOrder()];
-        scoperto = new boolean[grafo.getOrder()];
+        //scoperto = new boolean[grafo.getOrder()];
 
         ArrayList<Integer> Coda = new ArrayList<>();
         ArrayList<Integer> Scoperti = new ArrayList<>();
+        Coda.add(sorgente);
         Scoperti.add(sorgente);
 
         Arrays.fill(distanza, -1);
+        distanza[sorgente] = 0;
 
         while (!Coda.isEmpty()) {
             int u = Coda.remove(0);
             for (int v : grafo.getNeighbors(u)) {
                 if (!Scoperti.contains(v)) {
                     Coda.add(v);
-                    scoperto[v] = true;
+                    Scoperti.add(v);
                     distanza[v] = distanza[u]+1;
                 }
             }
