@@ -76,7 +76,6 @@ public class BFSTest {
         int numeroNodi = bfsTest.getNodesInOrderOfVisit(0).size();//<<-prima chiamata del metodo
         assertEquals(4, numeroNodi);
         numeroNodi = bfsTest.getNodesInOrderOfVisit(2).size(); //<<-seconda chiamata, stesso oggetto,
-
         assertEquals(4, numeroNodi);
     }
 
