@@ -15,6 +15,7 @@ import java.util.Arrays;
 public class BFS {
     GraphInterface grafo; //per memorizzare il grafo su cui si lavora
     boolean[] scoperto;   //per memorizzare i nodi scoperti: scoperti[2]=true se il nodo 2 e' stato scoperto
+
     ArrayList<Integer> nodiVisitatiInOrdine; //elenco dei nodi nell'ordine in cui sono stati visitati
     int[] distanza; //distanza[v] = distanza del nodo v dalla sorgente
 
