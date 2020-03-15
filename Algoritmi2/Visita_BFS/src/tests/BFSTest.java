@@ -1,3 +1,10 @@
+/*
+  @author Luca Borsalino
+ * date: 2020-03-15
+ *
+ * Prima esercitazione di laboratorio di Algoritmi2
+ * Universita' del Piemonte Orientale (Alessandria) DISIT / Informatica.
+ */
 package tests;
 
 import classes.BFS;
@@ -6,16 +13,17 @@ import it.uniupo.graphLib.GraphInterface;
 import it.uniupo.graphLib.UndirectedGraph;
 import org.junit.Test;
 
-import java.util.ArrayList;
-
 import static org.junit.Assert.*;
 
 public class BFSTest {
 
+    GraphInterface grafo;
+    BFS bfsTest;
+
     @Test
     public void testCreate() {
-        GraphInterface grafo = new DirectedGraph(3);
-        BFS bfsTest = new BFS(grafo);
+        grafo = new DirectedGraph(3);
+        bfsTest = new BFS(grafo);
         assertNotNull(bfsTest);
     }
 
@@ -25,8 +33,8 @@ public class BFSTest {
      */
     @Test
     public void testScoperti1() {
-        GraphInterface grafo = new UndirectedGraph(1);
-        BFS bfsTest = new BFS(grafo);
+        grafo = new UndirectedGraph(1);
+        bfsTest = new BFS(grafo);
         assertEquals(1, bfsTest.getNodesInOrderOfVisit(0).size());
     }
 
@@ -36,8 +44,8 @@ public class BFSTest {
      */
     @Test
     public void testScoperti2() {
-        GraphInterface grafo = new UndirectedGraph("2;0 1");
-        BFS bfsTest = new BFS(grafo);
+        grafo = new UndirectedGraph("2;0 1");
+        bfsTest = new BFS(grafo);
         assertEquals(2, bfsTest.getNodesInOrderOfVisit(0).size());
     }
 
@@ -47,8 +55,8 @@ public class BFSTest {
      */
     @Test
     public void testScopertiGenerico() {
-        GraphInterface grafo = new UndirectedGraph("4;0 2;0 1;2 3;1 3");
-        BFS bfsTest = new BFS(grafo);
+        grafo = new UndirectedGraph("4;0 2;0 1;2 3;1 3");
+        bfsTest = new BFS(grafo);
         assertEquals(4, bfsTest.getNodesInOrderOfVisit(2).size());
     }
 
@@ -57,8 +65,8 @@ public class BFSTest {
      */
     @Test
     public void testBFSOrder() {
-        GraphInterface grafo = new UndirectedGraph("4;0 2;0 1;2 3;1 3");
-        BFS bfsTest = new BFS(grafo);
+        grafo = new UndirectedGraph("4;0 2;0 1;2 3;1 3");
+        bfsTest = new BFS(grafo);
         assertTrue(bfsTest.getNodesInOrderOfVisit(2).get(0) == 2);
         assertTrue(bfsTest.getNodesInOrderOfVisit(2).get(1) == 0);
         assertTrue(bfsTest.getNodesInOrderOfVisit(2).get(2) == 3);
@@ -71,8 +79,8 @@ public class BFSTest {
      */
     @Test
     public void testInitNumeroNodiVisitati() {
-        GraphInterface grafo = new UndirectedGraph ("4;0 2;0 1;2 3;1 3");
-        BFS bfsTest = new BFS(grafo); //<<- creato una volta sola
+        grafo = new UndirectedGraph ("4;0 2;0 1;2 3;1 3");
+        bfsTest = new BFS(grafo); //<<- creato una volta sola
         int numeroNodi = bfsTest.getNodesInOrderOfVisit(0).size();//<<-prima chiamata del metodo
         assertEquals(4, numeroNodi);
         numeroNodi = bfsTest.getNodesInOrderOfVisit(2).size(); //<<-seconda chiamata, stesso oggetto,
@@ -84,8 +92,8 @@ public class BFSTest {
      */
     @Test
     public void testDistanza1() {
-        GraphInterface grafo = new UndirectedGraph(1);
-        BFS bfsTest = new BFS(grafo);
+        grafo = new UndirectedGraph(1);
+        bfsTest = new BFS(grafo);
         assertEquals(0, bfsTest.getDistance(0)[0]);
     }
 
@@ -94,8 +102,8 @@ public class BFSTest {
      */
     @Test
     public void testDistanza2() {
-        GraphInterface grafo = new UndirectedGraph("2;0 1");
-        BFS bfsTest = new BFS(grafo);
+        grafo = new UndirectedGraph("2;0 1");
+        bfsTest = new BFS(grafo);
         int[] distanze = bfsTest.getDistance(0);
         assertEquals(0, distanze[0]);
         assertEquals(1, distanze[1]);
@@ -107,8 +115,8 @@ public class BFSTest {
      */
     @Test
     public void testDistanzaGenerico() {
-        GraphInterface grafo = new UndirectedGraph("4;0 2;0 1;2 3;1 3");
-        BFS bfsTest = new BFS(grafo);
+        grafo = new UndirectedGraph("4;0 2;0 1;2 3;1 3");
+        bfsTest = new BFS(grafo);
         int[] distanze = bfsTest.getDistance(0);
         assertEquals(0, distanze[0]);
         assertEquals(1, distanze[1]);
@@ -116,16 +124,31 @@ public class BFSTest {
         assertEquals(2, distanze[3]);
     }
 
-    public void printArray(ArrayList<Integer> daStampare) {
-        for (Integer integer : daStampare) {
-            System.out.print(integer + " ");
-        }
-        System.out.println("");
+    /**
+     * Metodo che testa il corretto funzionamento della creazione di un albero con 2 nodi
+     * verificando che il numero di nodi sia corretto cosi' come il numero di archi
+     * (nArchi = nNodi-1).
+     */
+    @Test
+    public void testDimensioneAlbero2() {
+        grafo = new UndirectedGraph("2;0 1");
+        bfsTest = new BFS(grafo);
+        GraphInterface albero = bfsTest.bfsTree(0);
+        assertEquals(2, albero.getOrder());
+        assertEquals(1, albero.getEdgeNum());
     }
 
-    public void printDistanze(int[] distanza) {
-        for (int i=0; i<distanza.length; i++) {
-            System.out.println("distanza[" + i + "] = " + distanza[i]);
-        }
+    /**
+     * Metodo che testa il corretto funzionamento della creazione di un albero con 4 nodi
+     * verificando che il numero di nodi sia corretto cosi' come il numero di archi
+     * (nArchi = nNodi-1).
+     */
+    @Test
+    public void testDimensioneAlbero4() {
+        grafo = new UndirectedGraph("4;0 2;0 1;2 3;1 3");
+        bfsTest = new BFS(grafo);
+        GraphInterface albero = bfsTest.bfsTree(0);
+        assertEquals(4, albero.getOrder());
+        assertEquals(3, albero.getEdgeNum());
     }
 }
