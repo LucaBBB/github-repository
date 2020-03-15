@@ -67,11 +67,8 @@ public class BFSTest {
     public void testBFSOrder() {
         grafo = new UndirectedGraph("4;0 2;0 1;2 3;1 3");
         bfsTest = new BFS(grafo);
-        assertTrue(bfsTest.getNodesInOrderOfVisit(2).get(0) == 2);
-        assertTrue(bfsTest.getNodesInOrderOfVisit(2).get(1) == 0);
-        assertTrue(bfsTest.getNodesInOrderOfVisit(2).get(2) == 3);
-        assertTrue(bfsTest.getNodesInOrderOfVisit(2).get(3) == 1);
-        assertFalse(bfsTest.getNodesInOrderOfVisit(2).get(2) == 1);
+        assertTrue(bfsTest.getNodesInOrderOfVisit(2).get(2)==0 || bfsTest.getNodesInOrderOfVisit(2).get(2)==3);
+        assertNotEquals(1, (int) bfsTest.getNodesInOrderOfVisit(2).get(2));
     }
 
     /**
