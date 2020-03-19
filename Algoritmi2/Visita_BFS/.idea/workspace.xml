@@ -62,7 +62,7 @@
       <recent name="C:\Users\PC-di-Luca\Desktop\Visita_BFS" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BFSTest">
+  <component name="RunManager" selected="JUnit.DFSTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -76,7 +76,7 @@
       </method>
     </configuration>
     <configuration name="BFSTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Visita_BFS" />
+      <module name="Algoritmi2_Laboratorio" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tests.*" />
@@ -92,7 +92,7 @@
       </method>
     </configuration>
     <configuration name="BFSTest.testArchiAlbero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Visita_BFS" />
+      <module name="Algoritmi2_Laboratorio" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tests.*" />
@@ -108,25 +108,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BFSTest.testDimensioneAlbero2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Visita_BFS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.BFSTest" />
-      <option name="METHOD_NAME" value="testDimensioneAlbero2" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BFSTest.testDimensioneAlbero4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Visita_BFS" />
+      <module name="Algoritmi2_Laboratorio" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tests.*" />
@@ -143,7 +126,7 @@
       </method>
     </configuration>
     <configuration name="BFSTest.testOrdineDiVisita" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Visita_BFS" />
+      <module name="Algoritmi2_Laboratorio" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tests.*" />
@@ -154,6 +137,22 @@
       <option name="MAIN_CLASS_NAME" value="tests.BFSTest" />
       <option name="METHOD_NAME" value="testOrdineDiVisita" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DFSTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Algoritmi2_Laboratorio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DFSTest" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -186,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DFSTest" />
         <item itemvalue="JUnit.BFSTest" />
         <item itemvalue="JUnit.BFSTest.testOrdineDiVisita" />
         <item itemvalue="JUnit.BFSTest.testDimensioneAlbero4" />
         <item itemvalue="JUnit.BFSTest.testArchiAlbero" />
-        <item itemvalue="JUnit.BFSTest.testDimensioneAlbero2" />
       </list>
     </recent_temporary>
   </component>
@@ -288,22 +287,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="300" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584525745659" />
-    <state width="1877" height="233" key="GridCell.Tab.0.bottom" timestamp="1584291937174">
+    <state width="914" height="234" key="GridCell.Tab.0.bottom" timestamp="1584612392306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="233" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584291937174" />
-    <state width="1877" height="233" key="GridCell.Tab.0.center" timestamp="1584291937174">
+    <state width="914" height="234" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584612392306" />
+    <state width="914" height="234" key="GridCell.Tab.0.center" timestamp="1584612392306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="233" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584291937174" />
-    <state width="1877" height="233" key="GridCell.Tab.0.left" timestamp="1584291937174">
+    <state width="914" height="234" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584612392306" />
+    <state width="914" height="234" key="GridCell.Tab.0.left" timestamp="1584612392306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="233" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584291937174" />
-    <state width="1877" height="233" key="GridCell.Tab.0.right" timestamp="1584291937174">
+    <state width="914" height="234" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584612392306" />
+    <state width="914" height="234" key="GridCell.Tab.0.right" timestamp="1584612392306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="233" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584291937174" />
+    <state width="914" height="234" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584612392306" />
     <state width="1062" height="347" key="GridCell.Tab.1.bottom" timestamp="1584008231892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
