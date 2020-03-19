@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e00122ba-f077-4a23-8e8e-343bc26ca209" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Visita_BFS/classes/BFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Visita_BFS/classes/BFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Visita_BFS/tests/BFSTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Visita_BFS/tests/BFSTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Visita_BFS/classes/BFS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Visita_BFS/tests/BFSTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +62,7 @@
       <recent name="C:\Users\PC-di-Luca\Desktop\Visita_BFS" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DFSTest">
+  <component name="RunManager" selected="JUnit.DFSTest.testInitNumeroNodiVisitati">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -75,74 +75,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BFSTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Algoritmi2_Laboratorio" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.BFSTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BFSTest.testArchiAlbero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Algoritmi2_Laboratorio" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.BFSTest" />
-      <option name="METHOD_NAME" value="testArchiAlbero" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BFSTest.testDimensioneAlbero4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Algoritmi2_Laboratorio" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.BFSTest" />
-      <option name="METHOD_NAME" value="testDimensioneAlbero4" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BFSTest.testOrdineDiVisita" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Algoritmi2_Laboratorio" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.BFSTest" />
-      <option name="METHOD_NAME" value="testOrdineDiVisita" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DFSTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DFSTest.test10OneNodeVisited" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Algoritmi2_Laboratorio" />
       <extension name="coverage">
         <pattern>
@@ -152,7 +85,76 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.DFSTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="test10OneNodeVisited" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DFSTest.test11TwoNodeVisited" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Algoritmi2_Laboratorio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DFSTest" />
+      <option name="METHOD_NAME" value="test11TwoNodeVisited" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DFSTest.testArchiDFS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Algoritmi2_Laboratorio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DFSTest" />
+      <option name="METHOD_NAME" value="testArchiDFS" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DFSTest.testInitAlbero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Algoritmi2_Laboratorio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DFSTest" />
+      <option name="METHOD_NAME" value="testInitAlbero" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DFSTest.testInitNumeroNodiVisitati" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Algoritmi2_Laboratorio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DFSTest" />
+      <option name="METHOD_NAME" value="testInitNumeroNodiVisitati" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -185,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DFSTest" />
-        <item itemvalue="JUnit.BFSTest" />
-        <item itemvalue="JUnit.BFSTest.testOrdineDiVisita" />
-        <item itemvalue="JUnit.BFSTest.testDimensioneAlbero4" />
-        <item itemvalue="JUnit.BFSTest.testArchiAlbero" />
+        <item itemvalue="JUnit.DFSTest.testInitNumeroNodiVisitati" />
+        <item itemvalue="JUnit.DFSTest.testInitAlbero" />
+        <item itemvalue="JUnit.DFSTest.testArchiDFS" />
+        <item itemvalue="JUnit.DFSTest.test11TwoNodeVisited" />
+        <item itemvalue="JUnit.DFSTest.test10OneNodeVisited" />
       </list>
     </recent_temporary>
   </component>
@@ -212,6 +214,7 @@
       <workItem from="1584290786587" duration="1149000" />
       <workItem from="1584295012345" duration="215000" />
       <workItem from="1584525721713" duration="34000" />
+      <workItem from="1584612307161" duration="2883000" />
     </task>
     <task id="LOCAL-00001" summary="Aggiunto primo progetto su visita BFS">
       <created>1584276053239</created>
@@ -255,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584291925064</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Aggiunta classe DFS con metodi.">
+      <created>1584612424680</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1584612424680</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,17 +278,18 @@
     <MESSAGE value="Aggiunto il metodo utile a creare l'albero BFS ricoprente e due test per verificare la corretta dimensione dell'albero creato." />
     <MESSAGE value="Aggiunto metodo (con test) per creare un array contenente l'ordine di visita dei singoli nodi di un grafo." />
     <MESSAGE value="Tolti warning dalla classe test." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tolti warning dalla classe test." />
+    <MESSAGE value="Aggiunta classe DFS con metodi." />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta classe DFS con metodi." />
   </component>
   <component name="WindowStateProjectService">
     <state x="227" y="0" width="506" height="1040" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1584278704570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="227" y="0" width="506" height="1040" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1584278704570" />
-    <state x="664" y="118" key="CommitChangelistDialog2" timestamp="1584291924255">
+    <state x="664" y="118" key="CommitChangelistDialog2" timestamp="1584612423639">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="664" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584291924255" />
+    <state x="664" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584612423639" />
     <state x="274" y="242" key="DetectedRootsChooserDialog" timestamp="1583931445486">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -287,22 +298,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="300" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584525745659" />
-    <state width="914" height="234" key="GridCell.Tab.0.bottom" timestamp="1584612392306">
+    <state width="1877" height="234" key="GridCell.Tab.0.bottom" timestamp="1584614959815">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="234" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584612392306" />
-    <state width="914" height="234" key="GridCell.Tab.0.center" timestamp="1584612392306">
+    <state width="1877" height="234" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584614959815" />
+    <state width="1877" height="234" key="GridCell.Tab.0.center" timestamp="1584614959815">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="234" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584612392306" />
-    <state width="914" height="234" key="GridCell.Tab.0.left" timestamp="1584612392306">
+    <state width="1877" height="234" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584614959815" />
+    <state width="1877" height="234" key="GridCell.Tab.0.left" timestamp="1584614959814">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="234" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584612392306" />
-    <state width="914" height="234" key="GridCell.Tab.0.right" timestamp="1584612392306">
+    <state width="1877" height="234" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584614959814" />
+    <state width="1877" height="234" key="GridCell.Tab.0.right" timestamp="1584614959815">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="234" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584612392306" />
+    <state width="1877" height="234" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584614959815" />
     <state width="1062" height="347" key="GridCell.Tab.1.bottom" timestamp="1584008231892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -323,10 +334,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="499" y="125" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584278182956" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1584291926514">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1584612427384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584291926514" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584612427384" />
     <state x="258" y="425" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584007885679">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
