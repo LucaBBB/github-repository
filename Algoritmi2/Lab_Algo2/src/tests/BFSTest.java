@@ -13,6 +13,8 @@ import it.uniupo.graphLib.GraphInterface;
 import it.uniupo.graphLib.UndirectedGraph;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 public class BFSTest {
@@ -162,5 +164,22 @@ public class BFSTest {
         assertEquals(1, ordineDiVisita[0]);
         assertEquals(2, ordineDiVisita[3]);
         assertEquals(3, ordineDiVisita[1]);
+    }
+
+    /**
+     * Metodo che testa il corretto funzionamento della creazione dell'ArrayList contenente il cammino minimo dalla
+     * sorgente ad un nodo v.
+     */
+    @Test
+    public void testCamminoMinimo() {
+        grafo = new UndirectedGraph("7;0 1;0 2;1 3;2 3;3 4;3 5;1 6;4 6");
+        bfsTest = new BFS(grafo);
+        ArrayList<Integer> camminoMinimo = bfsTest.camminoMinimo(0, 6);
+        for (int i=camminoMinimo.size()-1; i>=0; i--) {
+            System.out.println(camminoMinimo.get(i));
+        }
+        assertEquals(0, (int)camminoMinimo.get(2));
+        assertEquals(1, (int)camminoMinimo.get(1));
+        assertEquals(6, (int)camminoMinimo.get(0));
     }
 }

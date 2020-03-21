@@ -15,9 +15,13 @@ import java.util.Arrays;
 public class BFS {
     GraphInterface grafo; //per memorizzare il grafo su cui si lavora
     boolean[] scoperto;   //per memorizzare i nodi scoperti: scoperti[2]=true se il nodo 2 e' stato scoperto
+    ArrayList<Integer> Scoperti;
+    ArrayList<Integer> Coda;
+    GraphInterface Albero;
 
     ArrayList<Integer> nodiVisitatiInOrdine; //elenco dei nodi nell'ordine in cui sono stati visitati
     int[] distanza; //distanza[v] = distanza del nodo v dalla sorgente
+    int[] padri;
 
     /**
      * Costruttore della classe BFS
@@ -145,5 +149,93 @@ public class BFS {
             }
         }
         return ordineDiVisita;
+    }
+
+    /**
+     * Metodo che dopo aver effettuato la visita BFS sul grafo e dopo aver inizializzato correttamente l'array padri,
+     * inserisce, guardando l'array dei padri, il cammino minimo dal nodo alla sorgente seguendo i padri.
+     *
+     * @param sorgente il nodo di partenza della visita BFS.
+     * @param nodo il nodo da cui calcolare il cammino minimo.
+     * @return l'ArrayList contentente il cammino minimo dal nodo alla sorgente (al contrario!).
+     */
+    public ArrayList<Integer> camminoMinimo(int sorgente, int nodo) {
+        ArrayList<Integer> camminoMinimoDaSorgenteANodo = new ArrayList<>();
+        padri = new int[grafo.getOrder()];
+        VisitaBFSCamminoMinimo(sorgente);
+
+        camminoMinimoDaSorgenteANodo.add(nodo);
+        int tmp = nodo;
+
+        while(padri[tmp] != sorgente) {
+            tmp = padri[tmp];
+            camminoMinimoDaSorgenteANodo.add(tmp);
+        }
+        camminoMinimoDaSorgenteANodo.add(sorgente);
+
+        return camminoMinimoDaSorgenteANodo;
+    }
+
+    /**
+     * Metodo che effettua la visita BFS su un grafo a partire dalla sorgente;
+     * inoltre, aggiunge all'array padri chi e' il padre del nodo u.
+     *
+     * @param sorgente il nodo di partenza della visita.
+     */
+    private void VisitaBFSCamminoMinimo(int sorgente) {
+        ArrayList<Integer> S = new ArrayList<>();
+        GraphInterface A = grafo.create();
+        ArrayList<Integer> CODA = new ArrayList<>();
+
+        S.add(sorgente);
+        CODA.add(sorgente);
+        while(!CODA.isEmpty()) {
+            int u = CODA.remove(0);
+            for (int vicino : grafo.getNeighbors(u)) {
+                if (!S.contains(vicino)) {
+                    padri[vicino] = u;
+                    CODA.add(vicino);
+                    S.add(vicino);
+                    A.addEdge(u, vicino);
+                }
+            }
+        }
+    }
+
+    /**
+     * Metodo BFS generico che effettua la visita ed inizializza tutte le strutture dati.
+     *
+     * @param sorgente il nodo di partenza della visita.
+     */
+    private void BFSVisit(int sorgente) {
+        nodiVisitatiInOrdine = new ArrayList<>();
+        distanza = new int[grafo.getOrder()];
+        Coda = new ArrayList<>();
+        Scoperti = new ArrayList<>();
+        Albero = grafo.create();
+
+        scoperto = new boolean[grafo.getOrder()];
+
+        nodiVisitatiInOrdine.add(sorgente);
+        Coda.add(sorgente);
+        Scoperti.add(sorgente);
+
+        Arrays.fill(distanza, -1);
+        distanza[sorgente] = 0;
+
+        while (!Coda.isEmpty()) {
+            Integer u = Coda.remove(0);
+
+            for (int vicino : grafo.getNeighbors(u)) {
+                if (!nodiVisitatiInOrdine.contains(vicino) && !Scoperti.contains(vicino)) {
+                    Coda.add(vicino);
+                    Scoperti.add(vicino);
+                    nodiVisitatiInOrdine.add(vicino);
+                    scoperto[vicino] = true;
+                    distanza[vicino] = distanza[u]+1;
+                    Albero.addEdge(u, vicino);
+                }
+            }
+        }
     }
 }
