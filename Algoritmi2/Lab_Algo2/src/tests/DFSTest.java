@@ -1,3 +1,11 @@
+/*
+  @author Luca Borsalino
+ * date: 2020-03-22
+ *
+ * Seconda esercitazione di laboratorio di Algoritmi2
+ * Universita' del Piemonte Orientale (Alessandria) DISIT / Informatica.
+ */
+
 package tests;
 
 import classes.DFS;
