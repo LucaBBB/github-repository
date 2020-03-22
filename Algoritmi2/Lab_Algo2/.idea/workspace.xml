@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="634b7c75-f9f9-443f-88ee-d60af280f942" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/BFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/DFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/BFSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/BFSTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/DFSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/DFSTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Visita_BFS/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Visita_BFS/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Visita_BFS/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Visita_BFS/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Visita_BFS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Visita_BFS/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="634b7c75-f9f9-443f-88ee-d60af280f942" name="Default Changelist" comment="" />
+    <list id="a1596145-1402-4729-b87b-745ccaeb1d39" name="ANother CHangeList" comment="">
+      <change beforePath="$PROJECT_DIR$/../Visita_BFS/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Visita_BFS/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Visita_BFS/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Visita_BFS/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Visita_BFS/Algoritmi2_Laboratorio.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Visita_BFS/graphLib.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Visita_BFS/src/classes/BFS.java" beforeDir="false" />
@@ -194,6 +191,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="634b7c75-f9f9-443f-88ee-d60af280f942" name="Default Changelist" comment="" />
+      <changelist id="a1596145-1402-4729-b87b-745ccaeb1d39" name="ANother CHangeList" comment="" />
       <created>1584622683959</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -201,7 +199,7 @@
       <workItem from="1584622685236" duration="1678000" />
       <workItem from="1584696255488" duration="556000" />
       <workItem from="1584805252281" duration="2461000" />
-      <workItem from="1584869774055" duration="2108000" />
+      <workItem from="1584869774055" duration="2348000" />
     </task>
     <task id="LOCAL-00001" summary="Aggiunti metodi.">
       <created>1584807693674</created>
@@ -210,7 +208,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584807693674</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Aggiunti metodi per i cicli sia su BFS che su DFS.">
+      <created>1584871980172</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584871980172</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Aggiunti metodi per i cicli sia su BFS che su DFS.">
+      <created>1584872117249</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584872117249</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,13 +230,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Aggiunti metodi." />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunti metodi." />
+    <MESSAGE value="Aggiunti metodi per i cicli sia su BFS che su DFS." />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunti metodi per i cicli sia su BFS che su DFS." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="424" y="61" width="1155" height="864" key="CommitChangelistDialog2" timestamp="1584871979161">
+    <state x="424" y="61" width="1155" height="864" key="CommitChangelistDialog2" timestamp="1584872116349">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="424" y="61" width="1155" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584871979161" />
+    <state x="424" y="61" width="1155" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584872116349" />
     <state width="914" height="136" key="GridCell.Tab.0.bottom" timestamp="1584871856955">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -241,10 +254,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="914" height="136" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584871856954" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1584871983901">
+    <state x="812" y="408" key="VCS.ChangelistChooser" timestamp="1584872103690">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584871983901" />
+    <state x="812" y="408" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584872103690" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1584872118549">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584872118549" />
     <state x="191" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584622696830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
