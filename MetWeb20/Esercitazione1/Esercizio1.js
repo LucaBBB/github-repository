@@ -1,32 +1,39 @@
 "use strict";
 
-const voti = [18, 20, 22, 25, 30, 26];
+const voti = [26, 20, 19, 21, 25, 24, 22];
+let copiaVoti = Array.from(voti);
 
-let votiCopy = Array.from(voti);
+console.log("Voti prima:");  // stampo array prima di manipolarlo.
+console.log(copiaVoti);
 
-for (let i=0; i<2; i++) {
-    let votoPeggiore = Math.min(...votiCopy);
-    let duale = (30-(votoPeggiore-18));
+for (let nIterazioni=0; nIterazioni<2; nIterazioni++) {
+    let votoMin = copiaVoti[0];
+    let posMin = 0;
+    let sommaVoti = copiaVoti[0];
 
-    let posPeggiore = votiCopy.indexOf(votoPeggiore);
-    votiCopy.splice(posPeggiore, 1);
-    votiCopy.push(duale);
+    for (let i = 1; i < copiaVoti.length; i++) {
+        if (copiaVoti[i] < votoMin) {
+            votoMin = copiaVoti[i];
+            posMin = i;
+        }
+        sommaVoti += copiaVoti[i];
+    }
+    let dualeVotoMin = 30-(votoMin-18);
+
+    copiaVoti.splice(posMin, 1);
+    copiaVoti.push(dualeVotoMin);
 }
 
-let sommaVoti = 0;
+let sommaVotiPre = 0;
+let sommaVotiPost = 0;
+
 for(let i=0; i<voti.length; i++) {
-    console.log(i+1 + "o voto: " + voti[i]);
-    sommaVoti += voti[i];
+    sommaVotiPre += voti[i];
+    sommaVotiPost += copiaVoti[i];
 }
 
-let sommaVotiCopy = 0;
-for(let i=0; i<votiCopy.length; i++) {
-    console.log(i+1 + "o voto migliorato: " + votiCopy[i]);
-    sommaVotiCopy += votiCopy[i];
-}
+console.log("Media: " + Math.round(sommaVotiPre/voti.length));
 
-let mediaVotiArr = Math.round(sommaVoti/voti.length);
-let mediaVotiCopyArr = Math.round(sommaVotiCopy/voti.length);
-
-console.log("La media dei voti e': " + mediaVotiArr);
-console.log("La media dei voti migliorata e': " + mediaVotiCopyArr);
+console.log("Voti dopo:");
+console.log(copiaVoti);
+console.log("Media: " + Math.round(sommaVotiPost/copiaVoti.length));
