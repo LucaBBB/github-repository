@@ -118,4 +118,23 @@ public class DFSTest {
         assertEquals(3, dfsTest.visitaDFSCompleta().getEdgeNum());
     }
 
+    @Test
+    public void testCicliGOrientato() {
+        int nNodi = 6;
+        grafo = new DirectedGraph(nNodi + ";0 1;0 2;2 3;3 5;1 5;4 1");
+        dfsTest = new DFS(grafo);
+        assertFalse(dfsTest.DFSCicliGOrientato(0));
+    }
+
+    /**
+     * Non funziona!
+     */
+    @Test
+    public void testCicliGNOrientato() {
+        int nNodi = 6;
+        grafo = new UndirectedGraph(nNodi + ";0 1;0 4;1 2;1 3;2 3;4 5");
+        dfsTest = new DFS(grafo);
+        assertFalse(dfsTest.DFSCicliGNOrientato(0));
+    }
+
 }

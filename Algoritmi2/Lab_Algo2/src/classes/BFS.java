@@ -21,7 +21,9 @@ public class BFS {
 
     ArrayList<Integer> nodiVisitatiInOrdine; //elenco dei nodi nell'ordine in cui sono stati visitati
     int[] distanza; //distanza[v] = distanza del nodo v dalla sorgente
-    int[] padri;
+    int[] padre;
+
+    boolean esisteCiclo;
 
     /**
      * Costruttore della classe BFS
@@ -161,14 +163,14 @@ public class BFS {
      */
     public ArrayList<Integer> camminoMinimo(int sorgente, int nodo) {
         ArrayList<Integer> camminoMinimoDaSorgenteANodo = new ArrayList<>();
-        padri = new int[grafo.getOrder()];
+        padre = new int[grafo.getOrder()];
         VisitaBFSCamminoMinimo(sorgente);
 
         camminoMinimoDaSorgenteANodo.add(nodo);
         int tmp = nodo;
 
-        while(padri[tmp] != sorgente) {
-            tmp = padri[tmp];
+        while(padre[tmp] != sorgente) {
+            tmp = padre[tmp];
             camminoMinimoDaSorgenteANodo.add(tmp);
         }
         camminoMinimoDaSorgenteANodo.add(sorgente);
@@ -193,13 +195,42 @@ public class BFS {
             int u = CODA.remove(0);
             for (int vicino : grafo.getNeighbors(u)) {
                 if (!S.contains(vicino)) {
-                    padri[vicino] = u;
+                    padre[vicino] = u;
                     CODA.add(vicino);
                     S.add(vicino);
                     A.addEdge(u, vicino);
                 }
             }
         }
+    }
+
+    /**
+     * Metodo per verificare partendo dalla sorgente con una visita BFS se in un grafo ci sono dei cicli.
+     *
+     * @param sorgente il nodo di partenza della visita BFS.
+     */
+    public boolean BFSCicliGNOrientato(int sorgente) {
+        Scoperti = new ArrayList<>();
+        Coda = new ArrayList<>();
+        padre = new int[grafo.getOrder()];
+        esisteCiclo = false;
+
+        Scoperti.add(sorgente);
+        Coda.add(sorgente);
+
+        while (!Coda.isEmpty()) {
+            int u = Coda.remove(0);
+            for (int vicino : grafo.getNeighbors(u)) {
+                if (!Scoperti.contains(vicino)) {
+                    Coda.add(vicino);
+                    Scoperti.add(vicino);
+                    padre[vicino] = u;
+                }
+                else if (vicino != padre[u])
+                    esisteCiclo = true;
+            }
+        }
+        return esisteCiclo;
     }
 
     /**

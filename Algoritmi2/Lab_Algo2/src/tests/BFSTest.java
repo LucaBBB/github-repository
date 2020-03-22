@@ -182,4 +182,15 @@ public class BFSTest {
         assertEquals(1, (int)camminoMinimo.get(1));
         assertEquals(6, (int)camminoMinimo.get(0));
     }
+
+    /**
+     * Metodo che testa il corretto funzionamento della funzionalita per capire se esiste un ciclo nel grafo
+     * con sorgente a 0.
+     */
+    @Test
+    public void testCicli() {
+        grafo = new UndirectedGraph("6;0 1;0 4;4 5;1 2;1 3;2 3");
+        bfsTest = new BFS(grafo);
+        assertTrue(bfsTest.BFSCicliGNOrientato(0));
+    }
 }
