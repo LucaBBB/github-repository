@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="634b7c75-f9f9-443f-88ee-d60af280f942" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/DFSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/DFSTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab_Algo2/classes/DFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab_Algo2/classes/DFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab_Algo2/tests/DFSTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab_Algo2/tests/DFSTest.class" afterDir="false" />
     </list>
     <list id="a1596145-1402-4729-b87b-745ccaeb1d39" name="ANother CHangeList" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -193,7 +194,7 @@
       <workItem from="1584869774055" duration="2563000" />
       <workItem from="1584895592975" duration="166000" />
       <workItem from="1584995598183" duration="668000" />
-      <workItem from="1585043097611" duration="259000" />
+      <workItem from="1585043097611" duration="582000" />
     </task>
     <task id="LOCAL-00001" summary="Aggiunti metodi.">
       <created>1584807693674</created>
@@ -216,7 +217,28 @@
       <option name="project" value="LOCAL" />
       <updated>1584872117249</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Aggiunti metodi per i cicli sia su BFS che su DFS.">
+      <created>1585043449272</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585043449272</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Aggiunti metodi per i cicli sia su BFS che su DFS.">
+      <created>1585043471945</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585043471945</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Aggiunti metodi per i cicli sia su BFS che su DFS.">
+      <created>1585043486168</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1585043486168</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,34 +250,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="Aggiunti metodi per i cicli sia su BFS che su DFS." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="424" y="61" width="1155" height="864" key="CommitChangelistDialog2" timestamp="1585043471031">
+    <state x="424" y="61" width="1155" height="864" key="CommitChangelistDialog2" timestamp="1585043485301">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="424" y="61" width="1155" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585043471031" />
-    <state width="1877" height="136" key="GridCell.Tab.0.bottom" timestamp="1585043301430">
+    <state x="424" y="61" width="1155" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585043485301" />
+    <state width="914" height="136" key="GridCell.Tab.0.bottom" timestamp="1585043679967">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585043301430" />
-    <state width="1877" height="136" key="GridCell.Tab.0.center" timestamp="1585043301429">
+    <state width="914" height="136" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585043679967" />
+    <state width="914" height="136" key="GridCell.Tab.0.center" timestamp="1585043679967">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585043301429" />
-    <state width="1877" height="136" key="GridCell.Tab.0.left" timestamp="1585043301429">
+    <state width="914" height="136" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585043679967" />
+    <state width="914" height="136" key="GridCell.Tab.0.left" timestamp="1585043679967">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585043301429" />
-    <state width="1877" height="136" key="GridCell.Tab.0.right" timestamp="1585043301429">
+    <state width="914" height="136" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585043679967" />
+    <state width="914" height="136" key="GridCell.Tab.0.right" timestamp="1585043679967">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585043301429" />
+    <state width="914" height="136" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585043679967" />
     <state x="812" y="408" key="VCS.ChangelistChooser" timestamp="1584872103690">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="812" y="408" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584872103690" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1585043452194">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1585043488099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585043452194" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585043488099" />
     <state x="191" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584622696830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
