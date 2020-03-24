@@ -15,6 +15,8 @@ import it.uniupo.graphLib.GraphInterface;
 import it.uniupo.graphLib.UndirectedGraph;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 public class DFSTest {
@@ -105,8 +107,24 @@ public class DFSTest {
     public void testInitNumeroNodiVisitati() throws NotAllNodesReachedException {
         int nNodi = 4;
         grafo = new UndirectedGraph (nNodi + ";0 2;0 1;2 3;1 3");
-        dfsTest = new DFS(grafo); //<<- creato una volta sola
+        dfsTest = new DFS(grafo);
         assertEquals(nNodi, dfsTest.getNodesInOrderPostVisit(2).size());
+    }
+
+    /**
+     * Metodo che testa la corretta posizione dei nodi visitati in post visit.
+     * @throws NotAllNodesReachedException
+     */
+    @Test
+    public void testNodiPostOrdine() throws NotAllNodesReachedException {
+        int nNodi = 4;
+        grafo = new UndirectedGraph (nNodi + ";0 2;0 1;2 3;1 3");
+        dfsTest = new DFS(grafo);
+        ArrayList<Integer> postOrdine = dfsTest.getNodesInOrderPostVisit(0);
+        assertEquals(0, (int)postOrdine.get(3));
+        assertEquals(1, (int)postOrdine.get(0));
+        assertEquals(2, (int)postOrdine.get(2));
+        assertEquals(3, (int)postOrdine.get(1));
     }
 
     @Test (expected = NotAllNodesReachedException.class)
