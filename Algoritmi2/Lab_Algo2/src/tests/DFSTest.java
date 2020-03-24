@@ -126,6 +126,9 @@ public class DFSTest {
         assertEquals(3, (int)postOrdine.get(1));
     }
 
+    /**
+     *
+     */
     @Test (expected = NotAllNodesReachedException.class)
     public void testExceptionNotAllNodesReached() throws NotAllNodesReachedException {
         int nNodi = 5;
