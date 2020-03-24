@@ -228,10 +228,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Aggiunti metodi per i cicli sia su BFS che su DFS." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="424" y="61" width="1155" height="864" key="CommitChangelistDialog2" timestamp="1584872116349">
+    <state x="424" y="61" width="1155" height="864" key="CommitChangelistDialog2" timestamp="1585043448074">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="424" y="61" width="1155" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584872116349" />
+    <state x="424" y="61" width="1155" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585043448074" />
     <state width="1877" height="136" key="GridCell.Tab.0.bottom" timestamp="1585043301430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -252,10 +252,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="812" y="408" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584872103690" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1584872118549">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1585043452194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584872118549" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585043452194" />
     <state x="191" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584622696830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

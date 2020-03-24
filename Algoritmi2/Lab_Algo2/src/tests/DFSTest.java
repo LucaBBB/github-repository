@@ -113,7 +113,6 @@ public class DFSTest {
 
     /**
      * Metodo che testa la corretta posizione dei nodi visitati in post visit.
-     * @throws NotAllNodesReachedException
      */
     @Test
     public void testNodiPostOrdine() throws NotAllNodesReachedException {
