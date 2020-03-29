@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="634b7c75-f9f9-443f-88ee-d60af280f942" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab_Algo2/classes/BFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab_Algo2/classes/BFS.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lab_Algo2/classes/DFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab_Algo2/classes/DFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab_Algo2/tests/BFSTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab_Algo2/tests/BFSTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lab_Algo2/tests/DFSTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab_Algo2/tests/DFSTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/BFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/DFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/BFSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/BFSTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/DFSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/DFSTest.java" afterDir="false" />
     </list>
     <list id="a1596145-1402-4729-b87b-745ccaeb1d39" name="ANother CHangeList" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +50,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
-  <component name="RunManager" selected="JUnit.DFSTest.testNodiPostOrdine">
+  <component name="RunManager" selected="JUnit.DFSTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -57,41 +63,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BFSTest.testCamminoMinimo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lab_Algo2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.BFSTest" />
-      <option name="METHOD_NAME" value="testCamminoMinimo" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BFSTest.testCicli" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lab_Algo2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.BFSTest" />
-      <option name="METHOD_NAME" value="testCicli" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DFSTest.testCicliGNOrientato" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DFSTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lab_Algo2" />
       <extension name="coverage">
         <pattern>
@@ -101,14 +73,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.DFSTest" />
-      <option name="METHOD_NAME" value="testCicliGNOrientato" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DFSTest.testCicliGOrientato" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DFSTest.testCycleThreeNodesNoCycle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lab_Algo2" />
       <extension name="coverage">
         <pattern>
@@ -118,14 +89,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.DFSTest" />
-      <option name="METHOD_NAME" value="testCicliGOrientato" />
+      <option name="METHOD_NAME" value="testCycleThreeNodesNoCycle" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DFSTest.testNodiPostOrdine" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DFSTest.testCycleThreeNodesWithCycle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lab_Algo2" />
       <extension name="coverage">
         <pattern>
@@ -135,7 +106,41 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.DFSTest" />
-      <option name="METHOD_NAME" value="testNodiPostOrdine" />
+      <option name="METHOD_NAME" value="testCycleThreeNodesWithCycle" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DFSTest.testCycleTwoNodes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab_Algo2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DFSTest" />
+      <option name="METHOD_NAME" value="testCycleTwoNodes" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DFSTest.testOrderVisitAndPostVisit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab_Algo2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DFSTest" />
+      <option name="METHOD_NAME" value="testOrderVisitAndPostVisit" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -169,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DFSTest.testNodiPostOrdine" />
-        <item itemvalue="JUnit.DFSTest.testCicliGNOrientato" />
-        <item itemvalue="JUnit.DFSTest.testCicliGOrientato" />
-        <item itemvalue="JUnit.BFSTest.testCicli" />
-        <item itemvalue="JUnit.BFSTest.testCamminoMinimo" />
+        <item itemvalue="JUnit.DFSTest" />
+        <item itemvalue="JUnit.DFSTest.testCycleThreeNodesWithCycle" />
+        <item itemvalue="JUnit.DFSTest.testCycleThreeNodesNoCycle" />
+        <item itemvalue="JUnit.DFSTest.testCycleTwoNodes" />
+        <item itemvalue="JUnit.DFSTest.testOrderVisitAndPostVisit" />
       </list>
     </recent_temporary>
   </component>
@@ -195,6 +200,15 @@
       <workItem from="1584895592975" duration="166000" />
       <workItem from="1584995598183" duration="668000" />
       <workItem from="1585043097611" duration="582000" />
+      <workItem from="1585060399490" duration="930000" />
+      <workItem from="1585128765336" duration="1500000" />
+      <workItem from="1585214001089" duration="3339000" />
+      <workItem from="1585238392578" duration="2751000" />
+      <workItem from="1585301049443" duration="3253000" />
+      <workItem from="1585400758286" duration="6890000" />
+      <workItem from="1585471702200" duration="3198000" />
+      <workItem from="1585488676088" duration="4374000" />
+      <workItem from="1585509969082" duration="2210000" />
     </task>
     <task id="LOCAL-00001" summary="Aggiunti metodi.">
       <created>1584807693674</created>
@@ -250,26 +264,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="Aggiunti metodi per i cicli sia su BFS che su DFS." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="828" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585302258472">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="828" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585302258472" />
+    <state x="1053" y="100" width="774" height="840" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1585406205694">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1053" y="100" width="774" height="840" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585406205694" />
     <state x="424" y="61" width="1155" height="864" key="CommitChangelistDialog2" timestamp="1585043485301">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="424" y="61" width="1155" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585043485301" />
-    <state width="914" height="136" key="GridCell.Tab.0.bottom" timestamp="1585043679967">
+    <state width="1877" height="210" key="GridCell.Tab.0.bottom" timestamp="1585512233965">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="136" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585043679967" />
-    <state width="914" height="136" key="GridCell.Tab.0.center" timestamp="1585043679967">
+    <state width="1877" height="210" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585512233965" />
+    <state width="1877" height="210" key="GridCell.Tab.0.center" timestamp="1585512233965">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="136" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585043679967" />
-    <state width="914" height="136" key="GridCell.Tab.0.left" timestamp="1585043679967">
+    <state width="1877" height="210" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585512233965" />
+    <state width="1877" height="210" key="GridCell.Tab.0.left" timestamp="1585512233965">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="136" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585043679967" />
-    <state width="914" height="136" key="GridCell.Tab.0.right" timestamp="1585043679967">
+    <state width="1877" height="210" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585512233965" />
+    <state width="1877" height="210" key="GridCell.Tab.0.right" timestamp="1585512233965">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="136" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585043679967" />
+    <state width="1877" height="210" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585512233965" />
     <state x="812" y="408" key="VCS.ChangelistChooser" timestamp="1584872103690">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -286,5 +308,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="296" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584805262527" />
+    <state x="1096" y="244" key="run.anything.popup" timestamp="1585303273356">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1096" y="244" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585303273356" />
   </component>
 </project>
