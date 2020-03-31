@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="634b7c75-f9f9-443f-88ee-d60af280f942" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab_Algo2/classes/BFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab_Algo2/classes/BFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab_Algo2/classes/DFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab_Algo2/classes/DFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab_Algo2/tests/BFSTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab_Algo2/tests/BFSTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab_Algo2/tests/DFSTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab_Algo2/tests/DFSTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/BFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/DFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/BFSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/BFSTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/DFSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/DFSTest.java" afterDir="false" />
     </list>
     <list id="a1596145-1402-4729-b87b-745ccaeb1d39" name="ANother CHangeList" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -208,7 +200,7 @@
       <workItem from="1585400758286" duration="6890000" />
       <workItem from="1585471702200" duration="3198000" />
       <workItem from="1585488676088" duration="4374000" />
-      <workItem from="1585509969082" duration="2210000" />
+      <workItem from="1585509969082" duration="2489000" />
     </task>
     <task id="LOCAL-00001" summary="Aggiunti metodi.">
       <created>1584807693674</created>
@@ -252,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585043486168</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Modifiche dopo lezione 3 di laboratorio di Algoritmi2">
+      <created>1585512379764</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585512379764</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +260,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Aggiunti metodi." />
     <MESSAGE value="Aggiunti metodi per i cicli sia su BFS che su DFS." />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunti metodi per i cicli sia su BFS che su DFS." />
+    <MESSAGE value="Modifiche dopo lezione 3 di laboratorio di Algoritmi2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifiche dopo lezione 3 di laboratorio di Algoritmi2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="828" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585302258472">
@@ -272,34 +272,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1053" y="100" width="774" height="840" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585406205694" />
-    <state x="424" y="61" width="1155" height="864" key="CommitChangelistDialog2" timestamp="1585043485301">
+    <state x="765" y="83" width="1155" height="864" key="CommitChangelistDialog2" timestamp="1585512377993">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="424" y="61" width="1155" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585043485301" />
-    <state width="1877" height="210" key="GridCell.Tab.0.bottom" timestamp="1585512233965">
+    <state x="765" y="83" width="1155" height="864" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585512377993" />
+    <state width="914" height="210" key="GridCell.Tab.0.bottom" timestamp="1585512459030">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="210" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585512233965" />
-    <state width="1877" height="210" key="GridCell.Tab.0.center" timestamp="1585512233965">
+    <state width="914" height="210" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585512459030" />
+    <state width="914" height="210" key="GridCell.Tab.0.center" timestamp="1585512459030">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="210" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585512233965" />
-    <state width="1877" height="210" key="GridCell.Tab.0.left" timestamp="1585512233965">
+    <state width="914" height="210" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585512459030" />
+    <state width="914" height="210" key="GridCell.Tab.0.left" timestamp="1585512459030">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="210" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585512233965" />
-    <state width="1877" height="210" key="GridCell.Tab.0.right" timestamp="1585512233965">
+    <state width="914" height="210" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585512459030" />
+    <state width="914" height="210" key="GridCell.Tab.0.right" timestamp="1585512459030">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="210" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585512233965" />
+    <state width="914" height="210" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585512459030" />
     <state x="812" y="408" key="VCS.ChangelistChooser" timestamp="1584872103690">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="812" y="408" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584872103690" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1585043488099">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1585512386753">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585043488099" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585512386753" />
     <state x="191" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584622696830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
