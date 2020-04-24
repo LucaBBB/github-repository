@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="it">
+    <head>
+        <title>Task Manager</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+        <div>
+            <nav class="navbar navbar-light bg-success">
+                <a class="navbar-brand" href="index.html">TaskManager</a>
+                <div class="col-xs-2">
+                    <input class="form-control" type="text" placeholder="Cerca...">
+                </div>
+                <img src="images/avatardefault_92824.svg" alt="profilo" class="img-thumbnail">
+            </nav>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-tutti-tab" data-toggle="pill" href="#v-pills-tutti" role="tab" aria-controls="v-pills-tutti" aria-selected="true">Tutti</a>
+                    <a class="nav-link" id="v-pills-importanti-tab" data-toggle="pill" href="#v-pills-importanti" role="tab" aria-controls="v-pills-importanti" aria-selected="false">Importanti</a>
+                    <a class="nav-link" id="v-pills-oggi-tab" data-toggle="pill" href="#v-pills-oggi" role="tab" aria-controls="v-pills-oggi" aria-selected="false">Oggi</a>
+                </div>
+            </div>
+
+            <div class="col-8">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active " id="v-pills-tutti" role="tabpanel" aria-labelledby="v-pills-home-tutti">
+                        <h1>Tutti</h1>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <p><input type="checkbox" class="form-check-input" id="exampleCheck1"> Completare lab 2 UPO Giovedi 23 Aprile 2020 alle 10:00</p>
+                                </tr>
+                                <tr>
+                                    <p><input type="checkbox" class="form-check-input" id="exampleCheck1"> Fare la spesa Personale Venerdi 24 Aprile 2020 alle 19:00</p>
+                                </tr>
+                                <tr>
+                                    <p><input type="checkbox" class="form-check-input" id="exampleCheck1"> !!! Leggere un bel libro</p>
+                                </tr>
+                            </tbody>
+                        </table>                      
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-importanti" role="tabpanel" aria-labelledby="v-pills-importanti-tab">
+                    <p>Questo è il tab di IMPORTANTI!!!</p>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-oggi" role="tabpanel" aria-labelledby="v-pills-oggi-tab">
+                    <p>Questo è il tab di OGGI!!!</p>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+    </body>
+</html>
