@@ -106,4 +106,35 @@ public class BFS {
         BFSTree(sorgente);
         return tree;
     }
+    //------------------------------------------------------------------------------------------------
+
+
+    //------------------------------------------------------------------------------------------------
+    private void BFSTreeGetOrderOfVisit(int sorgente, int[] orderOfVisit) {
+        ArrayList<Integer> coda = new ArrayList<>();
+        boolean[] scoperti = new boolean[ordine];
+        coda.add(sorgente);
+        scoperti[sorgente] = true;
+        orderOfVisit[sorgente] = 0;
+        int i=1;
+
+        while (!coda.isEmpty()) {
+            int u = coda.remove(0);
+            for (int v : grafo.getNeighbors(u)) {
+                if (!scoperti[v]) {
+                    coda.add(v);
+                    scoperti[v] = true;
+                    orderOfVisit[v] = i;
+                    i++;
+                }
+            }
+        }
+    }
+
+    public int[] getOrderOfVisit(int sorgente) {
+        int[] orderOfVisit = new int[ordine];
+        BFSTreeGetOrderOfVisit(sorgente, orderOfVisit);
+        return orderOfVisit;
+    }
+    //------------------------------------------------------------------------------------------------
 }

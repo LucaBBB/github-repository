@@ -117,4 +117,37 @@ public class BFSTest {
         int n = tree.getOrder();
         assertEquals(n-1, tree.getEdgeNum());
     }
+
+    @Test
+    public void testArchiAlbero() {
+        grafo = new UndirectedGraph("4;0 2;2 3;0 1;1 3");
+        bfsTest = new BFS(grafo);
+        GraphInterface tree = bfsTest.bfsTree(2);
+        assertTrue(tree.hasEdge(2, 0) && tree.hasEdge(2, 3));
+        assertTrue(tree.hasEdge(0,1 ) || tree.hasEdge(1, 3));
+    }
+
+    @Test
+    public void testInitAlbero() {
+        grafo = new UndirectedGraph("4;0 2;2 3;0 1;1 3");
+        bfsTest = new BFS(grafo);
+        GraphInterface tree = bfsTest.bfsTree(2);
+        assertTrue(tree.hasEdge(2, 0) && tree.hasEdge(2, 3));
+        GraphInterface treeBis = bfsTest.bfsTree(1);
+        assertTrue(treeBis.hasEdge(2, 0 ) || treeBis.hasEdge(2, 3));
+    }
+
+    //------------------------------------------------------------------------------------------------
+    // BFS ORDER OF VISIT
+    //------------------------------------------------------------------------------------------------
+    @Test
+    public void testOrderOfVisitGenerico() {
+        grafo = new UndirectedGraph("4;0 2;2 3;0 1;1 3");
+        bfsTest = new BFS(grafo);
+        int[] ordine = bfsTest.getOrderOfVisit(2);
+        assertEquals(1, ordine[0]);
+        assertEquals(3, ordine[1]);
+        assertEquals(0, ordine[2]);
+        assertEquals(2, ordine[3]);
+    }
 }
