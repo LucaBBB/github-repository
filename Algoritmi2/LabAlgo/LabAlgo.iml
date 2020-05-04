@@ -10,10 +10,10 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/graphLib.jar!/" />
+          <root url="jar://$MODULE_DIR$/src/Common/graphLib.jar!/" />
         </CLASSES>
         <JAVADOC>
-          <root url="jar://$MODULE_DIR$/graphLib.jar!/doc" />
+          <root url="jar://$MODULE_DIR$/src/Common/graphLib.jar!/doc" />
         </JAVADOC>
         <SOURCES />
       </library>
