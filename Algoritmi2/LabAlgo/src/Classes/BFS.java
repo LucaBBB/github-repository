@@ -1,5 +1,6 @@
 package Classes;
 
+import it.uniupo.graphLib.Edge;
 import it.uniupo.graphLib.GraphInterface;
 
 import java.util.ArrayList;
@@ -7,14 +8,15 @@ import java.util.Arrays;
 
 public class BFS {
     GraphInterface grafo;
-    int ordine;
+    int ordineG;
     ArrayList<Integer> nodesInOrderOfVisit;
     int[] distance;
     GraphInterface tree;
+    int[] padri;
 
     public BFS(GraphInterface g) {
         grafo = g;
-        ordine = grafo.getOrder();
+        ordineG = grafo.getOrder();
     }
 
     //------------------------------------------------------------------------------------------------
@@ -73,7 +75,7 @@ public class BFS {
 
     public int[] getDistance(int sorgente) {
         nodesInOrderOfVisit = new ArrayList<>();
-        distance = new int[ordine];
+        distance = new int[ordineG];
         Arrays.fill(distance, -1);
         BFSVisitGetDistance(sorgente);
         return distance;
@@ -84,7 +86,7 @@ public class BFS {
     //------------------------------------------------------------------------------------------------
     private void BFSTree(int sorgente) {
         ArrayList<Integer> coda = new ArrayList<>();
-        boolean[] scoperti = new boolean[ordine];
+        boolean[] scoperti = new boolean[ordineG];
         //tree = grafo.create();
         coda.add(sorgente);
         scoperti[sorgente] = true;
@@ -112,7 +114,7 @@ public class BFS {
     //------------------------------------------------------------------------------------------------
     private void BFSTreeGetOrderOfVisit(int sorgente, int[] orderOfVisit) {
         ArrayList<Integer> coda = new ArrayList<>();
-        boolean[] scoperti = new boolean[ordine];
+        boolean[] scoperti = new boolean[ordineG];
         coda.add(sorgente);
         scoperti[sorgente] = true;
         orderOfVisit[sorgente] = 0;
@@ -132,9 +134,108 @@ public class BFS {
     }
 
     public int[] getOrderOfVisit(int sorgente) {
-        int[] orderOfVisit = new int[ordine];
+        int[] orderOfVisit = new int[ordineG];
         BFSTreeGetOrderOfVisit(sorgente, orderOfVisit);
         return orderOfVisit;
     }
     //------------------------------------------------------------------------------------------------
+
+
+    //------------------------------------------------------------------------------------------------
+    // SHORTEST PATH
+    //------------------------------------------------------------------------------------------------
+    private void BFSVisitGetShortestPath(int sorgente, boolean[] scoperti) {
+        scoperti[sorgente] = true;
+        ArrayList<Integer> coda = new ArrayList<>();
+        coda.add(sorgente);
+
+        while(!coda.isEmpty()) {
+            int u = coda.remove(0);
+            for (Edge e : grafo.getOutEdges(u)) {
+                int vicino = e.getHead();
+                if (!scoperti[vicino]) {
+                    padri[vicino] = u;
+                    coda.add(vicino);
+                    scoperti[vicino] = true;
+                }
+            }
+        }
+    }
+
+    public ArrayList<Edge> getShortestPath(int sorg, int dest) {
+        if (sorg == dest)
+            return null;
+
+        ArrayList<Edge> camminoMinimo = new ArrayList<>();
+        padri = new int[grafo.getOrder()];
+        boolean[] scoperti = new boolean[grafo.getOrder()];
+
+        BFSVisitGetShortestPath(sorg, scoperti);
+
+        camminoMinimo.add(new Edge(dest, padri[dest]));
+        int tmp = dest;
+        while (padri[tmp] != sorg) {
+            tmp = padri[tmp];
+            camminoMinimo.add(new Edge(tmp, padri[tmp]));
+
+        }
+        return camminoMinimo;
+    }
+    //------------------------------------------------------------------------------------------------
+
+
+    //------------------------------------------------------------------------------------------------
+    // CONNESSIONE DI GRAFI NON ORIENTATI E COMPONENTI CONNESSE
+    //------------------------------------------------------------------------------------------------
+    private void DFSVisit(int sorgente, boolean[] scoperti, int[] cc, int cnt) {
+        ArrayList<Integer> coda = new ArrayList<>();
+        coda.add(sorgente);
+        scoperti[sorgente] = true;
+
+        while (!coda.isEmpty()) {
+            int u = coda.remove(0);
+            cc[u] = cnt;
+            for (Edge e : grafo.getOutEdges(u)) {
+                int vicino = e.getHead();
+                if (!scoperti[vicino]) {
+                    coda.add(vicino);
+                    scoperti[vicino] = true;
+                }
+            }
+        }
+    }
+
+    public boolean isConnected() {
+        boolean[] scoperti = new boolean[ordineG];
+        int[] cc = new int[ordineG];
+        int cnt = 0;
+
+        for (int i=0; i<ordineG; i++) {
+            if (!scoperti[i]) {
+                DFSVisit(i, scoperti, cc, cnt);
+                cnt++;
+            }
+        }
+
+        for (int n : cc) {
+            if (n > 0)
+                return false;
+        }
+        return true;
+    }
+
+    public int[] connectedComponents() {
+        int[] cc = new int[ordineG];
+        int cnt = 0;
+        boolean[] scoperti = new boolean[ordineG];
+
+        for (int i=0; i<ordineG; i++) {
+            if (!scoperti[i]) {
+                DFSVisit(i, scoperti, cc, cnt);
+                cnt++;
+            }
+        }
+
+        return cc;
+    }
 }
