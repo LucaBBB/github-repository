@@ -112,7 +112,7 @@ public class BFS {
 
 
     //------------------------------------------------------------------------------------------------
-    private void BFSTreeGetOrderOfVisit(int sorgente, int[] orderOfVisit) {
+    private void BFSVisitGetOrderOfVisit(int sorgente, int[] orderOfVisit) {
         ArrayList<Integer> coda = new ArrayList<>();
         boolean[] scoperti = new boolean[ordineG];
         coda.add(sorgente);
@@ -135,7 +135,7 @@ public class BFS {
 
     public int[] getOrderOfVisit(int sorgente) {
         int[] orderOfVisit = new int[ordineG];
-        BFSTreeGetOrderOfVisit(sorgente, orderOfVisit);
+        BFSVisitGetOrderOfVisit(sorgente, orderOfVisit);
         return orderOfVisit;
     }
     //------------------------------------------------------------------------------------------------
@@ -187,7 +187,7 @@ public class BFS {
     //------------------------------------------------------------------------------------------------
     // CONNESSIONE DI GRAFI NON ORIENTATI E COMPONENTI CONNESSE
     //------------------------------------------------------------------------------------------------
-    private void DFSVisit(int sorgente, boolean[] scoperti, int[] cc, int cnt) {
+    private void BFSVisit(int sorgente, boolean[] scoperti, int[] cc, int cnt) {
         ArrayList<Integer> coda = new ArrayList<>();
         coda.add(sorgente);
         scoperti[sorgente] = true;
@@ -212,7 +212,7 @@ public class BFS {
 
         for (int i=0; i<ordineG; i++) {
             if (!scoperti[i]) {
-                DFSVisit(i, scoperti, cc, cnt);
+                BFSVisit(i, scoperti, cc, cnt);
                 cnt++;
             }
         }
@@ -231,7 +231,7 @@ public class BFS {
 
         for (int i=0; i<ordineG; i++) {
             if (!scoperti[i]) {
-                DFSVisit(i, scoperti, cc, cnt);
+                BFSVisit(i, scoperti, cc, cnt);
                 cnt++;
             }
         }

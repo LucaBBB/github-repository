@@ -254,9 +254,6 @@ public class DFS {
     // ORDINE TOPOLOGICO
     //------------------------------------------------------------------------------------------------
     public ArrayList<Integer> topologicalOrder() {
-        if (hasDirCycle())
-            return null;
-
         ArrayList<Integer> ot = new ArrayList<>();
         boolean[] scoperti = new boolean[ordineG];
         for (int i=0; i<ordineG; i++) {
