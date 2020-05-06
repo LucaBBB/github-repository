@@ -4,8 +4,10 @@ import Exceptions.NotAllNodesReachedException;
 import it.uniupo.graphLib.Edge;
 import it.uniupo.graphLib.GraphInterface;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class DFS {
     GraphInterface grafo;
@@ -246,5 +248,23 @@ public class DFS {
         }
         cyclePath.add(sorg);
         return cyclePath;
+    }
+
+    //------------------------------------------------------------------------------------------------
+    // ORDINE TOPOLOGICO
+    //------------------------------------------------------------------------------------------------
+    public ArrayList<Integer> topologicalOrder() {
+        if (hasDirCycle())
+            return null;
+
+        ArrayList<Integer> ot = new ArrayList<>();
+        boolean[] scoperti = new boolean[ordineG];
+        for (int i=0; i<ordineG; i++) {
+            if (!scoperti[i]) {
+                DFSVisitGetNodesInOrderPostVisit(i, scoperti, ot);
+            }
+        }
+        Collections.reverse(ot);
+        return ot;
     }
 }

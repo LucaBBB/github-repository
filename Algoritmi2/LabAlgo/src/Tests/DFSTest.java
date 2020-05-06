@@ -279,4 +279,29 @@ public class DFSTest {
         assertEquals(3, (int)risultato.get(1));
         assertEquals(2, (int)risultato.get(2));
     }
+
+    //------------------------------------------------------------------------------------------------
+    // ORDINE TOPOLOGICO
+    //------------------------------------------------------------------------------------------------
+    @Test
+    public void testTopologicalOrder2Nodes() {
+        grafo = new DirectedGraph("2;0 1");
+        dfsTest = new DFS(grafo);
+        ArrayList<Integer> risultato = dfsTest.topologicalOrder();
+        assertEquals(2, risultato.size());
+        assertEquals(0, (int)risultato.get(0));
+        assertEquals(1, (int)risultato.get(1));
+    }
+
+    @Test
+    public void testTopologicalOrderGeneric() {
+        grafo = new DirectedGraph("4;3 1;3 0;1 0;1 2;0 2");
+        dfsTest = new DFS(grafo);
+        ArrayList<Integer> risultato = dfsTest.topologicalOrder();
+        assertEquals(4, risultato.size());
+        assertEquals(3, (int)risultato.get(0));
+        assertEquals(1, (int)risultato.get(1));
+        assertEquals(0, (int)risultato.get(2));
+        assertEquals(2, (int)risultato.get(3));
+    }
 }
