@@ -97,4 +97,11 @@ public class KosarajuTest {
         assertEquals(0, risultato[3]);
         assertEquals(0, risultato[4]);
     }
+
+    @Test
+    public void testOrdMaxSCC() {
+        grafo = new DirectedGraph("5;2 0;0 2;1 4;4 3;3 1;1 2;4 0");
+        kosaraju = new Kosaraju(grafo);
+        assertEquals(3, kosaraju.getOrdMaxSCC());
+    }
 }

@@ -5,6 +5,7 @@ import it.uniupo.graphLib.Edge;
 import it.uniupo.graphLib.GraphUtils;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 public class Kosaraju {
@@ -85,9 +86,36 @@ public class Kosaraju {
         return cc;
     }
 
+    /**
+     * Metodo che restituisce per ogni nodo l'SCC a cui appartiene.
+     *
+     * @return l'array contente ad ogni cella l'SCC a cui appartiene il nodo.
+     */
     public int[] getSCC() {
         ArrayList<Integer> ofv = postVisitList();
         grafoTrasposto = GraphUtils.reverseGraph(grafo);
         return connectedComponents(ofv);
+    }
+
+    /**
+     * Metodo che trova le SCC del grafo e calcola l'ordine della SCC piu' grande.
+     *
+     * @return l'ordine della SCC piu' grande.
+     */
+    public int getOrdMaxSCC() {
+        int[] scc = getSCC();
+        int[] maxSCC = new int[ordineG];
+        Arrays.fill(maxSCC, 0);
+        int ordMaxSCC = 0;
+
+        for (int value : scc) {
+            maxSCC[value]++;
+        }
+
+        for (int value : maxSCC) {
+            if (value > ordMaxSCC)
+                ordMaxSCC = value;
+        }
+        return ordMaxSCC;
     }
 }
